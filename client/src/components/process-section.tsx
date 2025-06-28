@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Lightbulb, Code, Rocket, CheckCircle } from "lucide-react";
+import { MessageCircle, Lightbulb, Code2, Rocket, CheckCircle } from "lucide-react";
 
 export default function ProcessSection() {
   const processSteps = [
@@ -22,7 +22,7 @@ export default function ProcessSection() {
     {
       step: 3,
       title: "Development Sprint",
-      icon: <Code className="text-white" size={24} />,
+      icon: <Code2 className="text-white" size={24} />,
       description: "Our AI-enhanced development process builds your application with daily progress updates.",
       duration: "3-7 days",
       bgColor: "bg-trust-blue"
