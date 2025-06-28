@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Play, X } from "lucide-react";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface VideoModalProps {
   trigger?: React.ReactNode;
@@ -28,6 +29,10 @@ export default function VideoModal({ trigger, videoId = "dQw4w9WgXcQ" }: VideoMo
         {trigger || defaultTrigger}
       </DialogTrigger>
       <DialogContent className="max-w-4xl p-0 bg-black border-none">
+        <VisuallyHidden>
+          <DialogTitle>MVP Development Demo Video</DialogTitle>
+          <DialogDescription>Watch how we build MVPs for entrepreneurs in just 7 days</DialogDescription>
+        </VisuallyHidden>
         <div className="relative aspect-video">
           <button
             onClick={() => setIsOpen(false)}
@@ -37,7 +42,7 @@ export default function VideoModal({ trigger, videoId = "dQw4w9WgXcQ" }: VideoMo
           </button>
           <iframe
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
-            title="Demo Video"
+            title="MVP Development Demo Video"
             className="w-full h-full rounded-lg"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

@@ -143,12 +143,38 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  .animate-bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
   .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .service-card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-text {
+    background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .pricing-card-popular {
+    background: linear-gradient(135deg, rgba(2, 103, 193, 0.1) 0%, rgba(76, 172, 119, 0.1) 100%);
+  }
+
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -169,5 +195,23 @@
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes bounceSubtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(76, 172, 119, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(76, 172, 119, 0.6);
   }
 }

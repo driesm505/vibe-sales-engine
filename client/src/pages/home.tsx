@@ -8,6 +8,7 @@ import TestimonialsSection from "@/components/testimonials-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import FloatingCTA from "@/components/floating-cta";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bot, Shield, Truck, MessageCircle, Handshake, Award } from "lucide-react";
 
@@ -101,6 +102,7 @@ export default function Home() {
       <FAQSection />
       <ContactSection />
       <Footer />
+      <FloatingCTA />
     </div>
   );
 }
