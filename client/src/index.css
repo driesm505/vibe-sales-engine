@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 40%, 2%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 13.8%, 34.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 40%, 2%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 40%, 2%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(145, 63%, 49%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(215.4, 16.3%, 46.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(145, 63%, 49%);
+  --radius: 0.75rem;
+  
+  /* Custom Vibe Coding colors */
+  --vibe-green: hsl(145, 63%, 49%);
+  --trust-blue: hsl(207, 90%, 38%);
+  --conversion-orange: hsl(12, 88%, 59%);
+  --warm-cream: hsl(50, 44%, 92%);
+  --rich-black: hsl(210, 40%, 2%);
+  --subtle-grey: hsl(210, 20%, 96%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(145, 63%, 49%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(145, 63%, 49%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-rich-black font-inter antialiased;
+    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-vibe-green {
+    color: var(--vibe-green);
+  }
+  
+  .text-trust-blue {
+    color: var(--trust-blue);
+  }
+  
+  .text-conversion-orange {
+    color: var(--conversion-orange);
+  }
+  
+  .text-rich-black {
+    color: var(--rich-black);
+  }
+  
+  .bg-vibe-green {
+    background-color: var(--vibe-green);
+  }
+  
+  .bg-trust-blue {
+    background-color: var(--trust-blue);
+  }
+  
+  .bg-conversion-orange {
+    background-color: var(--conversion-orange);
+  }
+  
+  .bg-warm-cream {
+    background-color: var(--warm-cream);
+  }
+  
+  .bg-subtle-grey {
+    background-color: var(--subtle-grey);
+  }
+  
+  .border-vibe-green {
+    border-color: var(--vibe-green);
+  }
+  
+  .border-trust-blue {
+    border-color: var(--trust-blue);
+  }
+  
+  .hover\:bg-vibe-green:hover {
+    background-color: hsl(145, 63%, 44%);
+  }
+  
+  .hover\:bg-trust-blue:hover {
+    background-color: hsl(207, 90%, 33%);
+  }
+  
+  .hover\:bg-conversion-orange:hover {
+    background-color: hsl(12, 88%, 54%);
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--warm-cream) 0%, var(--subtle-grey) 100%);
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--vibe-green) 0%, var(--trust-blue) 100%);
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

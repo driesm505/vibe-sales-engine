@@ -1,0 +1,106 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, Code } from "lucide-react";
+
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
+  return (
+    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-vibe-green to-trust-blue rounded-xl flex items-center justify-center">
+              <Code className="text-white text-lg" size={20} />
+            </div>
+            <span className="text-2xl font-bold font-poppins text-rich-black">Vibe Coding</span>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+            >
+              Services
+            </button>
+            <button 
+              onClick={() => scrollToSection('testimonials')}
+              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+            >
+              Testimonials
+            </button>
+            <button 
+              onClick={() => scrollToSection('pricing')}
+              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+            >
+              Pricing
+            </button>
+            <button 
+              onClick={() => scrollToSection('faq')}
+              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+            >
+              FAQ
+            </button>
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-conversion-orange hover:bg-conversion-orange/90 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Get Started
+            </Button>
+          </div>
+
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <div className="flex flex-col space-y-4 mt-8">
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                >
+                  Services
+                </button>
+                <button 
+                  onClick={() => scrollToSection('testimonials')}
+                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                >
+                  Testimonials
+                </button>
+                <button 
+                  onClick={() => scrollToSection('pricing')}
+                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                >
+                  Pricing
+                </button>
+                <button 
+                  onClick={() => scrollToSection('faq')}
+                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                >
+                  FAQ
+                </button>
+                <Button 
+                  onClick={() => scrollToSection('contact')}
+                  className="bg-conversion-orange hover:bg-conversion-orange/90 text-white w-full mt-4"
+                >
+                  Get Started
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </nav>
+  );
+}
