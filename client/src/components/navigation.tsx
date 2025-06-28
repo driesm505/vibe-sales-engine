@@ -33,34 +33,34 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-secondary hover:text-vibe-green transition-colors font-medium"
+              className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              {t.nav.services}
+              ./services
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-secondary hover:text-vibe-green transition-colors font-medium"
+              className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              {t.nav.testimonials}
+              ./reviews
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="text-secondary hover:text-vibe-green transition-colors font-medium"
+              className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              {t.nav.pricing}
+              ./pricing
             </button>
             <button 
               onClick={() => scrollToSection('faq')}
-              className="text-secondary hover:text-vibe-green transition-colors font-medium"
+              className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              {t.nav.faq}
+              ./docs
             </button>
             <LanguageSwitcher />
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-conversion-orange hover:bg-conversion-orange/90 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl font-mono"
             >
-              {t.nav.getStarted}
+              git clone
             </Button>
           </div>
 
