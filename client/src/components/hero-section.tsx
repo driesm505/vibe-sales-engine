@@ -1,11 +1,34 @@
 import { Button } from "@/components/ui/button";
-import { Rocket, Sparkles, Shield, Zap, Code2, Play } from "lucide-react";
+import { Rocket, Sparkles, Shield, Zap, Code2, Play, Terminal, ChevronRight } from "lucide-react";
 import VideoModal from "@/components/video-modal";
 import AutoVideo from "@/components/auto-video";
 import { useLanguage } from "@/lib/i18n";
+import { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const [typedText, setTypedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const techFeatures = [
+    "React + TypeScript",
+    "Node.js Backend", 
+    "PostgreSQL Database",
+    "Cloud Deployment",
+    "CI/CD Pipeline"
+  ];
+  
+  useEffect(() => {
+    const text = "Building your MVP with modern tech stack...";
+    const timer = setTimeout(() => {
+      if (currentIndex < text.length) {
+        setTypedText(text.slice(0, currentIndex + 1));
+        setCurrentIndex(prev => prev + 1);
+      }
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
   
   const scrollToContact = () => {
     const element = document.getElementById('contact');

@@ -1,8 +1,62 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Rocket, Globe2, Target, Brain, Sparkles, CheckCircle, Zap } from "lucide-react";
+import { Terminal, Code, Database, Cloud, CheckCircle, GitBranch, Monitor, Zap } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+
+// Custom hooks for animations
+function useCountAnimation(targetValue: number, isVisible: boolean) {
+  const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    if (!isVisible) return;
+    
+    const duration = 2000;
+    const increment = targetValue / (duration / 50);
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= targetValue) {
+        setCount(targetValue);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, 50);
+    
+    return () => clearInterval(timer);
+  }, [targetValue, isVisible]);
+  
+  return count;
+}
+
+function useIntersectionObserver() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    
+    return () => observer.disconnect();
+  }, []);
+  
+  return { ref, isVisible };
+}
 
 export default function ServicesSection() {
+  const { ref, isVisible } = useIntersectionObserver();
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -10,168 +64,253 @@ export default function ServicesSection() {
     }
   };
 
+  // Animated counts
+  const mvpCount = useCountAnimation(50, isVisible);
+  const webAppCount = useCountAnimation(100, isVisible);
+  const landingCount = useCountAnimation(200, isVisible);
+  const consultingCount = useCountAnimation(500, isVisible);
+
   const services = [
     {
-      icon: <Rocket className="text-white text-xl" />,
+      icon: <Terminal className="text-white text-xl" />,
       title: "MVP Development",
       price: "From €5,000",
-      description: "Your first version — lean, functional and designed for rapid testing. Get to market fast with a product that validates your concept and attracts investors.",
+      description: "Full-stack MVP with modern architecture. React frontend, Node.js backend, PostgreSQL database, and cloud deployment.",
       features: [
-        "Rapid prototyping & user feedback integration",
-        "Core features development & market validation",
-        "Investor-ready documentation & scalable architecture",
-        "7-day delivery guarantee"
+        "React + TypeScript frontend development",
+        "Node.js + Express.js backend API", 
+        "PostgreSQL database with Drizzle ORM",
+        "Docker containerization & cloud deployment"
       ],
-      bgColor: "bg-vibe-green",
-      buttonColor: "bg-vibe-green hover:bg-vibe-green/90"
+      bgColor: "bg-slate-800",
+      buttonColor: "bg-slate-800 hover:bg-slate-700",
+      techStack: ["React", "Node.js", "PostgreSQL", "Docker"],
+      completedCount: mvpCount,
+      codeSnippet: "$ npx create-vibe-mvp --stack=full"
     },
     {
-      icon: <Globe2 className="text-white text-xl" />,
-      title: "Web Development",
+      icon: <Code className="text-white text-xl" />,
+      title: "Web Applications",
       price: "From €2,500", 
-      description: "Custom web applications built with modern technologies. SaaS platforms, marketplaces, portals — whatever your startup needs to succeed.",
+      description: "Custom web applications with modern tech stack. SaaS platforms, admin dashboards, and complex business logic.",
       features: [
-        "Custom design & development with modern tech stack",
-        "Responsive & mobile-friendly optimization",
-        "SEO optimization & performance tuning",
-        "Security best practices & deployment"
+        "Next.js or React with server-side rendering",
+        "RESTful APIs with authentication & authorization", 
+        "Real-time features with WebSocket integration",
+        "Performance optimization & SEO implementation"
       ],
-      bgColor: "bg-trust-blue",
-      buttonColor: "bg-trust-blue hover:bg-trust-blue/90"
+      bgColor: "bg-blue-700",
+      buttonColor: "bg-blue-700 hover:bg-blue-600",
+      techStack: ["Next.js", "GraphQL", "Redis", "AWS"],
+      completedCount: webAppCount,
+      codeSnippet: "$ npm create next-app --typescript"
     },
     {
-      icon: <Target className="text-white text-xl" />,
-      title: "Landing Pages & Websites",
+      icon: <Monitor className="text-white text-xl" />,
+      title: "Landing Pages",
       price: "From €1,500",
-      description: "Show your product, collect leads and build trust from day one. High-converting pages that turn visitors into customers.",
+      description: "High-converting landing pages with A/B testing, analytics, and conversion optimization built-in.",
       features: [
-        "Conversion-optimized design & copywriting",
-        "Lead capture forms & analytics integration", 
-        "A/B testing ready & mobile optimization",
-        "3-day turnaround for landing pages"
+        "Conversion-optimized React components",
+        "Google Analytics & Facebook Pixel integration",
+        "A/B testing framework implementation", 
+        "Lighthouse performance score 90+"
       ],
-      bgColor: "bg-conversion-orange",
-      buttonColor: "bg-conversion-orange hover:bg-conversion-orange/90"
+      bgColor: "bg-green-700",
+      buttonColor: "bg-green-700 hover:bg-green-600",
+      techStack: ["React", "Vercel", "Analytics", "Testing"],
+      completedCount: landingCount,
+      codeSnippet: "$ npm run build && npm run analyze"
     },
     {
-      icon: <Brain className="text-white text-xl" />,
+      icon: <Database className="text-white text-xl" />,
       title: "Technical Consulting",
       price: "From €150/hour",
-      description: "Expert guidance for your technical challenges. From architecture review to performance optimization — get the advice you need.",
+      description: "Expert technical guidance for architecture, performance optimization, and best practices implementation.",
       features: [
-        "Technical strategy & architecture review",
-        "Code review & performance optimization",
-        "Security assessment & best practices",
-        "Flexible hourly or project-based pricing"
+        "System architecture design & review",
+        "Database optimization & query performance",
+        "Security audit & penetration testing",
+        "DevOps setup with CI/CD pipelines"
       ],
-      bgColor: "bg-purple-600",
-      buttonColor: "bg-purple-600 hover:bg-purple-700"
+      bgColor: "bg-purple-700",
+      buttonColor: "bg-purple-700 hover:bg-purple-600",
+      techStack: ["Architecture", "DevOps", "Security", "Performance"],
+      completedCount: consultingCount,
+      codeSnippet: "$ docker-compose up -d --scale app=3"
     }
   ];
 
   return (
     <>
-      {/* Value Proposition */}
-      <section className="py-20 bg-white">
+      {/* Tech Services Section */}
+      <section ref={ref} id="services" className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black relative overflow-hidden">
+        {/* Tech Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-blue-500/5"></div>
+          <div className="absolute top-10 left-10 text-green-400/20 font-mono text-sm animate-float">
+            {'>'} git status
+          </div>
+          <div className="absolute bottom-10 right-10 text-blue-400/20 font-mono text-sm animate-float" style={{ animationDelay: '2s' }}>
+            Building...
+          </div>
+          {/* Grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(76,172,119,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(76,172,119,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
+              <span className="text-green-400">{'>'}</span> Our Tech Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Modern development services powered by cutting-edge technology and AI-enhanced workflows.
+            </p>
+            
+            {/* Tech stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-green-400 font-mono">{mvpCount}+</div>
+                <div className="text-xs text-gray-400">MVPs Built</div>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-blue-400 font-mono">{webAppCount}+</div>
+                <div className="text-xs text-gray-400">Web Apps</div>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-purple-400 font-mono">{landingCount}+</div>
+                <div className="text-xs text-gray-400">Landing Pages</div>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-yellow-400 font-mono">{consultingCount}+</div>
+                <div className="text-xs text-gray-400">Hours Consulting</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            {services.map((service, index) => (
+              <Card key={index} className="bg-slate-800/90 border border-slate-700 rounded-2xl shadow-2xl hover:shadow-green-500/20 transition-all duration-500 transform hover:scale-105 group backdrop-blur-sm">
+                <CardContent className="p-8 relative overflow-hidden">
+                  {/* Terminal Header */}
+                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-600">
+                    <div className="flex items-center space-x-3">
+                      <div className={`w-12 h-12 ${service.bgColor} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        {service.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                        <div className="text-green-400 font-mono text-sm">{service.price}</div>
+                      </div>
+                    </div>
+                    <div className="text-2xl font-bold text-green-400 font-mono">
+                      {service.completedCount}+
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
+                  
+                  {/* Tech Stack */}
+                  <div className="mb-6">
+                    <div className="text-xs text-green-400 mb-2 font-mono">Tech Stack:</div>
+                    <div className="flex flex-wrap gap-2">
+                      {service.techStack.map((tech, techIndex) => (
+                        <span key={techIndex} className="text-xs bg-slate-700 text-gray-300 px-3 py-1 rounded-full font-mono border border-slate-600">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Code snippet */}
+                  <div className="bg-black/50 rounded-lg p-4 mb-6 border border-slate-600">
+                    <div className="text-xs text-green-400 mb-1 font-mono">{'>'}</div>
+                    <div className="text-xs text-gray-300 font-mono">{service.codeSnippet}</div>
+                  </div>
+                  
+                  {/* Features */}
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start text-gray-300">
+                        <CheckCircle className="mr-3 text-green-400 flex-shrink-0 mt-0.5" size={16} />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button 
+                    onClick={scrollToContact}
+                    className={`w-full ${service.buttonColor} text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg`}
+                  >
+                    <Terminal className="mr-2" size={16} />
+                    Start Project
+                  </Button>
+                  
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-500/5 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-slate-800/50 rounded-2xl p-8 max-w-2xl mx-auto border border-slate-700 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                <span className="text-green-400">{'>'}</span> Ready to Build?
+              </h3>
+              <p className="text-gray-300 mb-6">
+                Let's turn your idea into a production-ready application with modern tech stack.
+              </p>
+              <Button 
+                onClick={scrollToContact}
+                className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg"
+              >
+                <GitBranch className="mr-2" size={16} />
+                Initialize Project
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Value Proposition */}
+      <section className="py-20 bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-rich-black mb-6">
-              Built for Founders, Dreamers & Doers
+            <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
+              Why Choose Our Tech Approach?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              You bring the idea — we bring the technical power. Whether you're validating a concept, pitching investors, or launching to your first users.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Modern architecture, proven frameworks, and battle-tested deployment strategies.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-vibe-green to-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Target className="text-white text-2xl" />
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold font-poppins mb-4">Validate Your Concept</h3>
-              <p className="text-gray-600 leading-relaxed">Test your ideas quickly with a professional MVP that lets you gather real user feedback and iterate fast.</p>
+              <h3 className="text-2xl font-bold font-poppins text-white mb-4">Fast Development</h3>
+              <p className="text-gray-300 leading-relaxed">AI-enhanced development process with modern frameworks for rapid prototyping and deployment.</p>
             </div>
 
             <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-trust-blue to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold font-poppins mb-4">Impress Investors</h3>
-              <p className="text-gray-600 leading-relaxed">Show them a working product, not just slides. Demonstrate market fit with a functional prototype they can interact with.</p>
+              <h3 className="text-2xl font-bold font-poppins text-white mb-4">Production Ready</h3>
+              <p className="text-gray-300 leading-relaxed">Enterprise-grade code with security, performance, and scalability built-in from day one.</p>
             </div>
 
             <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-conversion-orange to-red-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Rocket className="text-white text-2xl" />
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Cloud className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold font-poppins mb-4">Launch with Confidence</h3>
-              <p className="text-gray-600 leading-relaxed">Scalable code that grows with your success. Built with modern best practices for easy maintenance and future development.</p>
+              <h3 className="text-2xl font-bold font-poppins text-white mb-4">Cloud Native</h3>
+              <p className="text-gray-300 leading-relaxed">Built for the cloud with containerization, auto-scaling, and zero-downtime deployments.</p>
             </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button 
-              onClick={scrollToContact}
-              size="lg"
-              className="bg-vibe-green hover:bg-vibe-green/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Let's Talk About Your Idea
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section id="services" className="py-20 gradient-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-rich-black mb-6">
-              What We Build
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect solution for your project — from quick MVP validation to full-scale platform development.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            {services.map((service, index) => (
-              <Card key={index} className="service-card bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 ${service.bgColor} rounded-xl flex items-center justify-center mr-4`}>
-                      {service.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold font-poppins">{service.title}</h3>
-                      <p className={`font-semibold ${service.bgColor === 'bg-vibe-green' ? 'text-vibe-green' : 
-                        service.bgColor === 'bg-trust-blue' ? 'text-trust-blue' : 
-                        service.bgColor === 'bg-conversion-orange' ? 'text-conversion-orange' : 'text-purple-600'}`}>
-                        {service.price}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <CheckCircle className={`mr-3 ${service.bgColor === 'bg-vibe-green' ? 'text-vibe-green' : 
-                          service.bgColor === 'bg-trust-blue' ? 'text-trust-blue' : 
-                          service.bgColor === 'bg-conversion-orange' ? 'text-conversion-orange' : 'text-purple-600'}`} size={16} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button 
-                    onClick={scrollToContact}
-                    className={`w-full ${service.buttonColor} text-white py-3 rounded-xl font-semibold transition-colors duration-300`}
-                  >
-                    Start Your {service.title.split(' ')[0]}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
