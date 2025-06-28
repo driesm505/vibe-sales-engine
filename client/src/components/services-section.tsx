@@ -167,25 +167,7 @@ export default function ServicesSection() {
               Modern development services powered by cutting-edge technology and AI-enhanced workflows.
             </p>
             
-            {/* Tech stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-green-400 font-mono">{mvpCount}+</div>
-                <div className="text-xs text-gray-400">MVPs Built</div>
-              </div>
-              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-blue-400 font-mono">{webAppCount}+</div>
-                <div className="text-xs text-gray-400">Web Apps</div>
-              </div>
-              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-purple-400 font-mono">{landingCount}+</div>
-                <div className="text-xs text-gray-400">Landing Pages</div>
-              </div>
-              <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-yellow-400 font-mono">{consultingCount}+</div>
-                <div className="text-xs text-gray-400">Hours Consulting</div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Services Grid */}
@@ -204,9 +186,7 @@ export default function ServicesSection() {
                         <div className="text-green-400 font-mono text-sm">{service.price}</div>
                       </div>
                     </div>
-                    <div className="text-2xl font-bold text-green-400 font-mono">
-                      {service.completedCount}+
-                    </div>
+                    
                   </div>
                   
                   <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>

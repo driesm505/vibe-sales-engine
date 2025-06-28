@@ -18,14 +18,16 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200/50">
+    <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md z-50 border-b border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-vibe-green to-trust-blue rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center">
               <Code className="text-white text-lg" size={20} />
             </div>
-            <span className="text-2xl font-bold font-poppins text-rich-black">Vibe Coding</span>
+            <span className="text-2xl font-bold font-poppins text-white">
+              <span className="text-green-400">{'<'}</span>Vibe<span className="text-green-400">{'/>'}</span>
+            </span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
