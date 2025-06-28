@@ -10,86 +10,107 @@ import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import FloatingCTA from "@/components/floating-cta";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bot, Shield, Truck, MessageCircle, Handshake, Award } from "lucide-react";
+import { Terminal, Code, Database, Cloud, GitBranch, Zap } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-warm-cream pb-20 lg:pb-0">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black pb-20 lg:pb-0 relative overflow-hidden">
+      {/* Tech Background Effects */}
+      <div className="fixed inset-0 cyber-grid opacity-30"></div>
+      <div className="fixed inset-0 particle-system">
+        {[...Array(20)].map((_, i) => (
+          <div 
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 6}s`,
+              animationDuration: `${6 + Math.random() * 4}s`
+            }}
+          />
+        ))}
+      </div>
       <Navigation />
       <HeroSection />
       <StatsSection />
       <ServicesSection />
       
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
+      {/* Tech Features Section */}
+      <section className="py-20 bg-slate-800/50 backdrop-blur-sm relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-rich-black mb-6">
-              Built with AI, Backed by Experience
+            <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
+              <span className="text-green-400">{'>'}</span> Modern Tech Stack
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              We accelerate your development with cutting-edge AI tools to move fast — without compromising on code quality. Our developers follow modern best practices, ensuring your app is easy to scale, maintain, and hand off to future teams.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              AI-accelerated development with enterprise-grade architecture. Clean code, best practices, and production-ready deployment from day one.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center bg-gradient-to-br from-green-50 to-green-100/50 border-none service-card">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-vibe-green rounded-2xl flex items-center justify-center">
-                  <Bot className="text-white text-2xl" />
+            <Card className="text-center bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm interactive-card group">
+              <CardContent className="p-8 relative overflow-hidden">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Terminal className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold font-poppins mb-4">MVP's in Less Than a Week</h3>
-                <p className="text-gray-600">From concept to working product faster than you thought possible — powered by advanced AI development tools.</p>
+                <h3 className="text-xl font-bold font-poppins mb-4 text-white">Rapid Development</h3>
+                <p className="text-gray-300">AI-enhanced workflows with modern frameworks for lightning-fast MVP development and deployment.</p>
+                <div className="mt-4 text-xs font-mono text-green-400">$ npm run build --fast</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-gradient-to-br from-blue-50 to-blue-100/50 border-none service-card">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-trust-blue rounded-2xl flex items-center justify-center">
-                  <Shield className="text-white text-2xl" />
+            <Card className="text-center bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm interactive-card group">
+              <CardContent className="p-8 relative overflow-hidden">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Code className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold font-poppins mb-4">AI-Enhanced Workflows</h3>
-                <p className="text-gray-600">Advanced AI tools for speed and precision in development while maintaining high standards and best practices.</p>
+                <h3 className="text-xl font-bold font-poppins mb-4 text-white">Clean Architecture</h3>
+                <p className="text-gray-300">Enterprise-grade code structure with TypeScript, testing, and documentation built-in from the start.</p>
+                <div className="mt-4 text-xs font-mono text-blue-400">$ npm test --coverage</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-gradient-to-br from-orange-50 to-orange-100/50 border-none service-card">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-conversion-orange rounded-2xl flex items-center justify-center">
-                  <Truck className="text-white text-2xl" />
+            <Card className="text-center bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm interactive-card group">
+              <CardContent className="p-8 relative overflow-hidden">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Database className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold font-poppins mb-4">Production-Ready Code</h3>
-                <p className="text-gray-600">Fully maintainable code that scales with your success — built with modern architecture patterns.</p>
+                <h3 className="text-xl font-bold font-poppins mb-4 text-white">Scalable Database</h3>
+                <p className="text-gray-300">PostgreSQL with optimized queries, migrations, and backup strategies for enterprise scalability.</p>
+                <div className="mt-4 text-xs font-mono text-purple-400">$ drizzle-kit migrate</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-gradient-to-br from-purple-50 to-purple-100/50 border-none service-card">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-purple-600 rounded-2xl flex items-center justify-center">
-                  <MessageCircle className="text-white text-2xl" />
+            <Card className="text-center bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm interactive-card group">
+              <CardContent className="p-8 relative overflow-hidden">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Cloud className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold font-poppins mb-4">Clear Communication</h3>
-                <p className="text-gray-600">No tech jargon — just clear communication and regular updates throughout your project development.</p>
+                <h3 className="text-xl font-bold font-poppins mb-4 text-white">Cloud-Native Deploy</h3>
+                <p className="text-gray-300">Docker containers with auto-scaling, monitoring, and zero-downtime deployments on AWS/Vercel.</p>
+                <div className="mt-4 text-xs font-mono text-orange-400">$ docker-compose up -d</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-gradient-to-br from-yellow-50 to-yellow-100/50 border-none service-card">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-yellow-500 rounded-2xl flex items-center justify-center">
-                  <Handshake className="text-white text-2xl" />
+            <Card className="text-center bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm interactive-card group">
+              <CardContent className="p-8 relative overflow-hidden">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-yellow-600 to-amber-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <GitBranch className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold font-poppins mb-4">Founder-First Mentality</h3>
-                <p className="text-gray-600">Friendly, flexible approach focused on your success — we understand the startup journey.</p>
+                <h3 className="text-xl font-bold font-poppins mb-4 text-white">CI/CD Pipeline</h3>
+                <p className="text-gray-300">Automated testing, code quality checks, and deployment pipeline with GitHub Actions integration.</p>
+                <div className="mt-4 text-xs font-mono text-yellow-400">$ git push origin main</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-gradient-to-br from-indigo-50 to-indigo-100/50 border-none service-card">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-indigo-600 rounded-2xl flex items-center justify-center">
-                  <Award className="text-white text-2xl" />
+            <Card className="text-center bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm interactive-card group">
+              <CardContent className="p-8 relative overflow-hidden">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-pink-600 to-rose-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="text-white text-2xl" />
                 </div>
-                <h3 className="text-xl font-bold font-poppins mb-4">Technical Excellence</h3>
-                <p className="text-gray-600">Industry best practices and high code quality standards maintained throughout the development process.</p>
+                <h3 className="text-xl font-bold font-poppins mb-4 text-white">Performance First</h3>
+                <p className="text-gray-300">Optimized bundle sizes, lazy loading, caching strategies, and Lighthouse scores of 90+ guaranteed.</p>
+                <div className="mt-4 text-xs font-mono text-pink-400">$ npm run analyze</div>
               </CardContent>
             </Card>
           </div>
