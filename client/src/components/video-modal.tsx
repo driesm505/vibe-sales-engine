@@ -18,7 +18,7 @@ export default function VideoModal({ trigger, videoId = "dQw4w9WgXcQ" }: VideoMo
     <Button 
       variant="outline"
       size="lg"
-      className="border-2 border-white text-white hover:bg-white hover:text-trust-blue px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+      className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-black px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 bg-slate-800/50 backdrop-blur-sm"
     >
       <Play className="mr-2" size={20} />
       {t.hero.watchDemo}
