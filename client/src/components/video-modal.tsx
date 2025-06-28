@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { Button } from "@/components/ui/button";
 import { Play, X } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { useLanguage } from "@/lib/i18n";
 
 interface VideoModalProps {
   trigger?: React.ReactNode;
@@ -11,6 +12,7 @@ interface VideoModalProps {
 
 export default function VideoModal({ trigger, videoId = "dQw4w9WgXcQ" }: VideoModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const defaultTrigger = (
     <Button 
@@ -19,7 +21,7 @@ export default function VideoModal({ trigger, videoId = "dQw4w9WgXcQ" }: VideoMo
       className="border-2 border-white text-white hover:bg-white hover:text-trust-blue px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
     >
       <Play className="mr-2" size={20} />
-      Watch Demo
+      {t.hero.watchDemo}
     </Button>
   );
 

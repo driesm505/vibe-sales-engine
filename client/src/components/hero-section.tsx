@@ -4,6 +4,8 @@ import VideoModal from "@/components/video-modal";
 import { useLanguage } from "@/lib/i18n";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -17,10 +19,10 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white animate-fade-in-up">
             <h1 className="text-5xl lg:text-7xl font-bold font-poppins leading-tight mb-6">
-              From Idea to <span className="text-yellow-300">App</span> in Days
+              {t.hero.title} <span className="text-yellow-300">{t.hero.titleHighlight}</span> {t.hero.titleEnd}
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed">
-              We build MVP's for entrepreneurs — powered by AI, built with best practices, and ready to scale.
+              {t.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button 
@@ -29,22 +31,22 @@ export default function HeroSection() {
                 className="bg-conversion-orange hover:bg-conversion-orange/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
               >
                 <Rocket className="mr-2" size={20} />
-                Share Your Idea
+                {t.hero.shareIdea}
               </Button>
               <VideoModal videoId="dQw4w9WgXcQ" />
             </div>
             <div className="flex flex-wrap items-center gap-6 text-blue-100">
               <div className="flex items-center">
                 <CheckCircle className="text-yellow-300 mr-2" size={20} />
-                <span>7-day delivery</span>
+                <span>{t.hero.features.delivery}</span>
               </div>
               <div className="flex items-center">
                 <Shield className="text-yellow-300 mr-2" size={20} />
-                <span>Production ready</span>
+                <span>{t.hero.features.production}</span>
               </div>
               <div className="flex items-center">
                 <Code className="text-yellow-300 mr-2" size={20} />
-                <span>AI-powered</span>
+                <span>{t.hero.features.ai}</span>
               </div>
             </div>
           </div>

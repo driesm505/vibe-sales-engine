@@ -1,34 +1,37 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Clock, Users, Star } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export default function StatsSection() {
+  const { t } = useLanguage();
+  
   const stats = [
     {
       icon: <Users className="text-white" size={28} />,
       number: "150+",
-      label: "Happy Clients",
-      description: "Entrepreneurs who trusted us with their vision",
+      label: t.stats.clients,
+      description: t.stats.clientsDesc,
       bgColor: "bg-vibe-green"
     },
     {
       icon: <Clock className="text-white" size={28} />,
       number: "7",
-      label: "Day Average",
-      description: "From concept to working MVP",
+      label: t.stats.average,
+      description: t.stats.averageDesc,
       bgColor: "bg-trust-blue"
     },
     {
       icon: <TrendingUp className="text-white" size={28} />,
       number: "€2M+",
-      label: "Funding Raised",
-      description: "By our clients using our MVPs",
+      label: t.stats.funding,
+      description: t.stats.fundingDesc,
       bgColor: "bg-conversion-orange"
     },
     {
       icon: <Star className="text-white" size={28} />,
       number: "4.9/5",
-      label: "Client Rating",
-      description: "Average satisfaction score",
+      label: t.stats.rating,
+      description: t.stats.ratingDesc,
       bgColor: "bg-purple-600"
     }
   ];
@@ -38,10 +41,10 @@ export default function StatsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            Proven Results
+            {t.stats.title}
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Numbers that speak louder than words — see why startups choose us for their MVP development.
+            {t.stats.subtitle}
           </p>
         </div>
 
@@ -70,15 +73,15 @@ export default function StatsSection() {
         <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
           <div className="text-white">
             <div className="text-3xl font-bold font-poppins mb-2">100%</div>
-            <div className="text-blue-100">On-time Delivery</div>
+            <div className="text-blue-100">{t.stats.delivery}</div>
           </div>
           <div className="text-white">
             <div className="text-3xl font-bold font-poppins mb-2">24h</div>
-            <div className="text-blue-100">Response Time</div>
+            <div className="text-blue-100">{t.stats.response}</div>
           </div>
           <div className="text-white">
             <div className="text-3xl font-bold font-poppins mb-2">30</div>
-            <div className="text-blue-100">Days Free Support</div>
+            <div className="text-blue-100">{t.stats.support}</div>
           </div>
         </div>
       </div>
