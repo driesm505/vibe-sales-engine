@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Globe, Megaphone, Settings, CheckCircle } from "lucide-react";
+import { Rocket, Globe2, Target, Brain, Sparkles, CheckCircle, Zap } from "lucide-react";
 
 export default function ServicesSection() {
   const scrollToContact = () => {
@@ -12,7 +12,7 @@ export default function ServicesSection() {
 
   const services = [
     {
-      icon: <Zap className="text-white text-xl" />,
+      icon: <Rocket className="text-white text-xl" />,
       title: "MVP Development",
       price: "From €5,000",
       description: "Your first version — lean, functional and designed for rapid testing. Get to market fast with a product that validates your concept and attracts investors.",
@@ -26,7 +26,7 @@ export default function ServicesSection() {
       buttonColor: "bg-vibe-green hover:bg-vibe-green/90"
     },
     {
-      icon: <Globe className="text-white text-xl" />,
+      icon: <Globe2 className="text-white text-xl" />,
       title: "Web Development",
       price: "From €2,500", 
       description: "Custom web applications built with modern technologies. SaaS platforms, marketplaces, portals — whatever your startup needs to succeed.",
@@ -40,7 +40,7 @@ export default function ServicesSection() {
       buttonColor: "bg-trust-blue hover:bg-trust-blue/90"
     },
     {
-      icon: <Megaphone className="text-white text-xl" />,
+      icon: <Target className="text-white text-xl" />,
       title: "Landing Pages & Websites",
       price: "From €1,500",
       description: "Show your product, collect leads and build trust from day one. High-converting pages that turn visitors into customers.",
@@ -54,7 +54,7 @@ export default function ServicesSection() {
       buttonColor: "bg-conversion-orange hover:bg-conversion-orange/90"
     },
     {
-      icon: <Settings className="text-white text-xl" />,
+      icon: <Brain className="text-white text-xl" />,
       title: "Technical Consulting",
       price: "From €150/hour",
       description: "Expert guidance for your technical challenges. From architecture review to performance optimization — get the advice you need.",
@@ -86,7 +86,7 @@ export default function ServicesSection() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-vibe-green to-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="text-white text-2xl" />
+                <Target className="text-white text-2xl" />
               </div>
               <h3 className="text-2xl font-bold font-poppins mb-4">Validate Your Concept</h3>
               <p className="text-gray-600 leading-relaxed">Test your ideas quickly with a professional MVP that lets you gather real user feedback and iterate fast.</p>
@@ -102,7 +102,7 @@ export default function ServicesSection() {
 
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-conversion-orange to-red-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Globe className="text-white text-2xl" />
+                <Rocket className="text-white text-2xl" />
               </div>
               <h3 className="text-2xl font-bold font-poppins mb-4">Launch with Confidence</h3>
               <p className="text-gray-600 leading-relaxed">Scalable code that grows with your success. Built with modern best practices for easy maintenance and future development.</p>

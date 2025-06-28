@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Rocket, Play, CheckCircle, Shield, Code } from "lucide-react";
+import { Rocket, Sparkles, Shield, Zap, Code2, Play } from "lucide-react";
 import VideoModal from "@/components/video-modal";
+import AutoVideo from "@/components/auto-video";
 import { useLanguage } from "@/lib/i18n";
 
 export default function HeroSection() {
@@ -37,7 +38,7 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-wrap items-center gap-6 text-blue-100">
               <div className="flex items-center">
-                <CheckCircle className="text-yellow-300 mr-2" size={20} />
+                <Zap className="text-yellow-300 mr-2" size={20} />
                 <span>{t.hero.features.delivery}</span>
               </div>
               <div className="flex items-center">
@@ -45,7 +46,7 @@ export default function HeroSection() {
                 <span>{t.hero.features.production}</span>
               </div>
               <div className="flex items-center">
-                <Code className="text-yellow-300 mr-2" size={20} />
+                <Sparkles className="text-yellow-300 mr-2" size={20} />
                 <span>{t.hero.features.ai}</span>
               </div>
             </div>
@@ -60,27 +61,11 @@ export default function HeroSection() {
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
                 
-                {/* Video Preview with Play Button */}
-                <div className="relative group cursor-pointer">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
-                    alt="MVP Dashboard Preview - Modern web application interface" 
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" 
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                    <VideoModal 
-                      videoId="dQw4w9WgXcQ"
-                      trigger={
-                        <div className="w-20 h-20 bg-white/90 hover:bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl">
-                          <Play className="text-trust-blue ml-1" size={32} />
-                        </div>
-                      }
-                    />
-                  </div>
-                  <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
-                    ● LIVE DEMO
-                  </div>
-                </div>
+                {/* Auto-Playing Video */}
+                <AutoVideo 
+                  className="h-80"
+                  poster="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
+                />
                 
                 <div className="p-6 bg-white">
                   <div className="flex items-center justify-between mb-4">
