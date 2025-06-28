@@ -14,7 +14,7 @@ import { Bot, Shield, Truck, MessageCircle, Handshake, Award } from "lucide-reac
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-warm-cream">
+    <div className="min-h-screen bg-warm-cream pb-20 lg:pb-0">
       <Navigation />
       <HeroSection />
       <StatsSection />

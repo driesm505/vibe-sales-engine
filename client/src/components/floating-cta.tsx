@@ -34,7 +34,7 @@ export default function FloatingCTA() {
   return (
     <>
       {/* Floating Action Button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-24 lg:bottom-6 right-6 z-50">
         {!isExpanded ? (
           <Button
             onClick={() => setIsExpanded(true)}
@@ -95,7 +95,7 @@ export default function FloatingCTA() {
       </div>
 
       {/* Sticky Bottom Banner (Mobile) */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-gray-200 p-4 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-white border-t border-gray-200 p-4 shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <div className="font-semibold text-sm text-gray-900">Ready to build your MVP?</div>
