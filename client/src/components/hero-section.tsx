@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Rocket, Play, CheckCircle, Shield, Code } from "lucide-react";
+import VideoModal from "@/components/video-modal";
 
 export default function HeroSection() {
   const scrollToContact = () => {
@@ -29,14 +30,7 @@ export default function HeroSection() {
                 <Rocket className="mr-2" size={20} />
                 Share Your Idea
               </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-trust-blue px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
-              >
-                <Play className="mr-2" size={20} />
-                Watch Demo
-              </Button>
+              <VideoModal videoId="dQw4w9WgXcQ" />
             </div>
             <div className="flex flex-wrap items-center gap-6 text-blue-100">
               <div className="flex items-center">
@@ -56,38 +50,60 @@ export default function HeroSection() {
 
           <div className="animate-fade-in-up animate-float">
             <div className="bg-white rounded-2xl p-4 shadow-2xl">
-              <div className="bg-gray-900 rounded-xl overflow-hidden">
+              <div className="bg-gray-900 rounded-xl overflow-hidden relative">
                 <div className="flex items-center space-x-2 p-4 bg-gray-800">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
-                  alt="Professional development team collaborating on code" 
-                  className="w-full h-80 object-cover" 
-                />
+                
+                {/* Video Preview with Play Button */}
+                <div className="relative group cursor-pointer">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                    alt="MVP Dashboard Preview - Modern web application interface" 
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" 
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    <VideoModal 
+                      videoId="dQw4w9WgXcQ"
+                      trigger={
+                        <div className="w-20 h-20 bg-white/90 hover:bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl">
+                          <Play className="text-trust-blue ml-1" size={32} />
+                        </div>
+                      }
+                    />
+                  </div>
+                  <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
+                    ● LIVE DEMO
+                  </div>
+                </div>
+                
                 <div className="p-6 bg-white">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-2xl font-bold text-gray-900">Your MVP Dashboard</h3>
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-vibe-green rounded-full animate-pulse"></div>
-                      <span className="text-sm text-gray-600">Live</span>
+                      <span className="text-sm text-gray-600">Live in Production</span>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-4 mb-4">
-                    <div className="bg-green-50 p-3 rounded-lg text-center">
+                    <div className="bg-green-50 p-3 rounded-lg text-center hover:bg-green-100 transition-colors">
                       <div className="text-2xl font-bold text-vibe-green">7</div>
                       <div className="text-xs text-gray-600">Days to Launch</div>
                     </div>
-                    <div className="bg-blue-50 p-3 rounded-lg text-center">
+                    <div className="bg-blue-50 p-3 rounded-lg text-center hover:bg-blue-100 transition-colors">
                       <div className="text-2xl font-bold text-trust-blue">100%</div>
                       <div className="text-xs text-gray-600">Mobile Ready</div>
                     </div>
-                    <div className="bg-orange-50 p-3 rounded-lg text-center">
+                    <div className="bg-orange-50 p-3 rounded-lg text-center hover:bg-orange-100 transition-colors">
                       <div className="text-2xl font-bold text-conversion-orange">AI</div>
                       <div className="text-xs text-gray-600">Powered</div>
                     </div>
+                  </div>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>Built with React + Node.js</span>
+                    <span>Deployed on Vercel</span>
                   </div>
                 </div>
               </div>
