@@ -67,7 +67,7 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">&gt;</span> Our Tech Process
+            <span className="text-green-400">{'>'}</span> Our Tech Process
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             From requirements analysis to production deployment — here's our technical workflow that delivers your MVP in 7 days.
@@ -122,23 +122,53 @@ export default function ProcessSection() {
                 
                 {/* Step Card */}
                 <div className="pt-24">
-                  <Card className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-t-4 group-hover:border-t-8" style={{ borderTopColor: step.progressColor }}>
-                    <CardContent className="p-6 text-center">
-                      <div className="mb-4">
-                        <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: step.progressColor }}>Step {step.step}</div>
-                        <h3 className="text-xl font-bold font-poppins text-gray-900 mb-2">{step.title}</h3>
+                  <Card className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl hover:shadow-green-500/20 transition-all duration-300 transform hover:scale-105 border-t-4 group-hover:border-t-8 overflow-hidden" style={{ borderTopColor: step.progressColor }}>
+                    <CardContent className="p-6 text-center relative">
+                      {/* Terminal Header */}
+                      <div className="absolute top-0 left-0 right-0 bg-slate-700 px-4 py-2 flex items-center justify-between">
+                        <div className="flex space-x-2">
+                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <div className="text-xs text-gray-400 font-mono">terminal</div>
                       </div>
                       
-                      <p className="text-gray-600 leading-relaxed mb-4 text-sm">{step.description}</p>
+                      <div className="pt-8 mb-4">
+                        <div className="text-xs font-bold uppercase tracking-widest mb-2 text-green-400">Step {step.step}</div>
+                        <h3 className="text-xl font-bold font-poppins text-white mb-2">{step.title}</h3>
+                      </div>
                       
-                      <div className="flex items-center justify-center text-sm text-gray-500 bg-gray-50 rounded-xl px-4 py-3 mb-4">
+                      <p className="text-gray-300 leading-relaxed mb-4 text-sm">{step.description}</p>
+                      
+                      {/* Tech Details */}
+                      <div className="bg-slate-900/50 rounded-lg p-3 mb-4 border border-slate-600">
+                        <div className="text-xs text-green-400 mb-2 font-mono">Technical Deliverables:</div>
+                        <div className="flex flex-wrap gap-1">
+                          {step.techDetails.map((tech, techIndex) => (
+                            <span key={techIndex} className="text-xs bg-slate-700 text-gray-300 px-2 py-1 rounded font-mono">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Code snippet */}
+                      <div className="bg-black/50 rounded-lg p-3 mb-4 border border-slate-600">
+                        <div className="text-left">
+                          <div className="text-xs text-green-400 mb-1 font-mono">{'>'}</div>
+                          <div className="text-xs text-gray-300 font-mono">{step.codeSnippet}</div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center justify-center text-sm text-gray-400 bg-slate-900/50 rounded-xl px-4 py-3 mb-4 border border-slate-600">
                         <Clock className="mr-2" size={14} />
-                        <span className="font-semibold">{step.duration}</span>
+                        <span className="font-semibold font-mono">{step.duration}</span>
                       </div>
                       
                       {/* Progress indicator */}
                       <div className="relative">
-                        <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="w-full bg-slate-700 rounded-full h-2">
                           <div 
                             className="h-2 rounded-full transition-all duration-1000 shadow-sm"
                             style={{ 
@@ -148,7 +178,7 @@ export default function ProcessSection() {
                             }}
                           ></div>
                         </div>
-                        <div className="absolute -top-1 right-0 w-4 h-4 rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: step.progressColor }}></div>
+                        <div className="absolute -top-1 right-0 w-4 h-4 rounded-full border-2 border-slate-800 shadow-lg" style={{ backgroundColor: step.progressColor }}></div>
                       </div>
                     </CardContent>
                   </Card>
