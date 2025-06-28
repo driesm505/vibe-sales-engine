@@ -102,14 +102,16 @@ This is a modern marketing website for Vibe Coding Agency, built as a full-stack
 - Static file serving capability
 
 ## Recent Changes
-- June 28, 2025: Complete tech-focused website transformation including:
-  - **Unified Tech Theme**: Dark slate/black backgrounds with green accent colors throughout
+- June 28, 2025: Complete tech-focused website transformation and UI/UX improvements:
+  - **Fixed White Button Issue**: Updated video modal button to use green accent colors matching tech theme
+  - **Improved Language Consistency**: Enhanced Dutch translations throughout the site for better UX
+  - **Unified Tech Theme**: Dark slate/black backgrounds with green accent colors throughout all sections
+  - **Enhanced Hero Section**: Added terminal aesthetics with typing animation and tech-focused styling
   - **Tech-Enhanced Navigation**: Terminal-style navigation with command references (./services, ./pricing, ./docs)
-  - **Developer-Focused Hero**: Auto-playing video with "LIVE DEMO" badge and terminal aesthetics
+  - **Developer-Focused Design**: Auto-playing video with "LIVE DEMO" badge and consistent terminal styling
   - **Tech Stack Integration**: Comprehensive pricing section with tech stacks, code snippets, and deployment commands
-  - **Terminal-Style Services**: Service cards redesigned as terminal windows with command prompts and tech badges
-  - **Developer Reviews**: Testimonials section featuring real developer feedback with tech metrics and stack info
-  - **Technical FAQ**: Documentation-style FAQ with command examples and terminal output formatting
+  - **Terminal-Style Components**: All sections redesigned with consistent terminal windows and command prompts
+  - **Technical Documentation**: FAQ section with command examples and terminal output formatting
   - **Code-Focused Footer**: Terminal tree structure and developer-oriented social links
   - **Advanced Animations**: Matrix rain effects, particle systems, cyber grids, and holographic gradients
   - **Consistent Background**: Unified cyber grid pattern and tech aesthetics across all sections

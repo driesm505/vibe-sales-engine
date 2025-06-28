@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { useLanguage } from "@/lib/i18n";
 import { NotebookPen, Calendar, Clock, Shield, Handshake } from "lucide-react";
 
 const contactSchema = z.object({
@@ -27,6 +28,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ContactFormData>({
@@ -70,18 +72,20 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 hero-gradient">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-slate-900 relative overflow-hidden">
+      {/* Tech Background */}
+      <div className="absolute inset-0 cyber-grid opacity-20"></div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            Ready to Build Your MVP?
+            <span className="text-green-400">{'>'}</span> Ready to Build Your MVP?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can bring your ideas to life. Schedule a free consultation and get a custom quote for your project.
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-mono">
+            {'// '}Let's discuss how we can bring your ideas to life. Schedule a free consultation and get a custom quote for your project.
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-2xl">
+        <div className="bg-slate-800 rounded-2xl p-8 shadow-2xl border border-slate-700">
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
