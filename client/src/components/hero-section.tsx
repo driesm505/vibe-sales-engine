@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Rocket, Play, CheckCircle, Shield, Code } from "lucide-react";
 import VideoModal from "@/components/video-modal";
+import { useLanguage } from "@/lib/i18n";
 
 export default function HeroSection() {
   const scrollToContact = () => {

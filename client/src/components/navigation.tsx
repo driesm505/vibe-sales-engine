@@ -2,9 +2,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Code } from "lucide-react";
+import LanguageSwitcher from "@/components/language-switcher";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -28,33 +31,34 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+              className="text-secondary hover:text-vibe-green transition-colors font-medium"
             >
-              Services
+              {t.nav.services}
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+              className="text-secondary hover:text-vibe-green transition-colors font-medium"
             >
-              Testimonials
+              {t.nav.testimonials}
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+              className="text-secondary hover:text-vibe-green transition-colors font-medium"
             >
-              Pricing
+              {t.nav.pricing}
             </button>
             <button 
               onClick={() => scrollToSection('faq')}
-              className="text-gray-600 hover:text-vibe-green transition-colors font-medium"
+              className="text-secondary hover:text-vibe-green transition-colors font-medium"
             >
-              FAQ
+              {t.nav.faq}
             </button>
+            <LanguageSwitcher />
             <Button 
               onClick={() => scrollToSection('contact')}
               className="bg-conversion-orange hover:bg-conversion-orange/90 text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Get Started
+              {t.nav.getStarted}
             </Button>
           </div>
 
@@ -66,35 +70,38 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent>
               <div className="flex flex-col space-y-4 mt-8">
+                <div className="mb-4">
+                  <LanguageSwitcher />
+                </div>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
                 >
-                  Services
+                  {t.nav.services}
                 </button>
                 <button 
                   onClick={() => scrollToSection('testimonials')}
-                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
                 >
-                  Testimonials
+                  {t.nav.testimonials}
                 </button>
                 <button 
                   onClick={() => scrollToSection('pricing')}
-                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
                 >
-                  Pricing
+                  {t.nav.pricing}
                 </button>
                 <button 
                   onClick={() => scrollToSection('faq')}
-                  className="text-left text-gray-600 hover:text-vibe-green transition-colors font-medium"
+                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
                 >
-                  FAQ
+                  {t.nav.faq}
                 </button>
                 <Button 
                   onClick={() => scrollToSection('contact')}
                   className="bg-conversion-orange hover:bg-conversion-orange/90 text-white w-full mt-4"
                 >
-                  Get Started
+                  {t.nav.getStarted}
                 </Button>
               </div>
             </SheetContent>

@@ -24,13 +24,16 @@
   --ring: hsl(145, 63%, 49%);
   --radius: 0.75rem;
   
-  /* Custom Vibe Coding colors */
-  --vibe-green: hsl(145, 63%, 49%);
-  --trust-blue: hsl(207, 90%, 38%);
-  --conversion-orange: hsl(12, 88%, 59%);
-  --warm-cream: hsl(50, 44%, 92%);
-  --rich-black: hsl(210, 40%, 2%);
-  --subtle-grey: hsl(210, 20%, 96%);
+  /* Custom Vibe Coding colors - Enhanced contrast */
+  --vibe-green: hsl(145, 70%, 45%);
+  --trust-blue: hsl(207, 95%, 35%);
+  --conversion-orange: hsl(12, 92%, 55%);
+  --warm-cream: hsl(50, 50%, 94%);
+  --rich-black: hsl(210, 50%, 8%);
+  --subtle-grey: hsl(210, 25%, 94%);
+  --text-primary: hsl(210, 50%, 8%);
+  --text-secondary: hsl(210, 25%, 35%);
+  --text-muted: hsl(210, 15%, 50%);
 }
 
 .dark {
@@ -84,7 +87,19 @@
   }
   
   .text-rich-black {
-    color: var(--rich-black);
+    color: var(--text-primary);
+  }
+  
+  .text-primary {
+    color: var(--text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .text-muted {
+    color: var(--text-muted);
   }
   
   .bg-vibe-green {
