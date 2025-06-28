@@ -1,53 +1,59 @@
-import { Code } from "lucide-react";
+import { Code, Github, Terminal, ExternalLink } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-rich-black text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black text-white py-16 relative overflow-hidden">
+      {/* Tech Background */}
+      <div className="absolute inset-0 cyber-grid opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-vibe-green to-trust-blue rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center">
                 <Code className="text-white text-lg" size={20} />
               </div>
-              <span className="text-2xl font-bold font-poppins">Vibe Coding</span>
+              <span className="text-2xl font-bold font-poppins">
+                <span className="text-green-400">{'<'}</span>Vibe<span className="text-green-400">{'/>'}</span>
+              </span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              We build MVP's for entrepreneurs — powered by AI, built with best practices, and ready to scale. From idea to launch in days, not months.
+            <p className="text-gray-300 mb-6 max-w-md font-mono text-sm">
+              {'// '} Enterprise-grade MVP development<br/>
+              {'// '} AI-accelerated, production-ready<br/>
+              {'// '} TypeScript + modern architecture
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-vibe-green rounded-xl flex items-center justify-center transition-colors duration-300">
-                <span className="text-sm font-bold">X</span>
+              <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-colors duration-300 border border-slate-700">
+                <Github className="text-white" size={16} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-vibe-green rounded-xl flex items-center justify-center transition-colors duration-300">
-                <span className="text-sm font-bold">in</span>
+              <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-colors duration-300 border border-slate-700">
+                <Terminal className="text-white" size={16} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-vibe-green rounded-xl flex items-center justify-center transition-colors duration-300">
-                <span className="text-sm font-bold">gh</span>
+              <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-colors duration-300 border border-slate-700">
+                <ExternalLink className="text-white" size={16} />
               </a>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Stack */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#services" className="hover:text-vibe-green transition-colors">MVP Development</a></li>
-              <li><a href="#services" className="hover:text-vibe-green transition-colors">Web Applications</a></li>
-              <li><a href="#services" className="hover:text-vibe-green transition-colors">Landing Pages</a></li>
-              <li><a href="#services" className="hover:text-vibe-green transition-colors">Technical Consulting</a></li>
+            <h4 className="text-lg font-semibold mb-4 font-mono text-green-400">./stack</h4>
+            <ul className="space-y-2 text-gray-300 font-mono text-sm">
+              <li><a href="#services" className="hover:text-green-400 transition-colors">├── MVP Prototypes</a></li>
+              <li><a href="#services" className="hover:text-green-400 transition-colors">├── Production Apps</a></li>
+              <li><a href="#services" className="hover:text-green-400 transition-colors">├── Scale Platforms</a></li>
+              <li><a href="#services" className="hover:text-green-400 transition-colors">└── DevOps Consulting</a></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Docs */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-vibe-green transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-vibe-green transition-colors">Our Process</a></li>
+            <h4 className="text-lg font-semibold mb-4 font-mono text-green-400">./docs</h4>
+            <ul className="space-y-2 text-gray-300 font-mono text-sm">
+              <li><a href="#" className="hover:text-green-400 transition-colors">├── Architecture</a></li>
+              <li><a href="#" className="hover:text-green-400 transition-colors">├── Deployment</a></li>
               <li><a href="#testimonials" className="hover:text-vibe-green transition-colors">Case Studies</a></li>
               <li><a href="#contact" className="hover:text-vibe-green transition-colors">Contact</a></li>
             </ul>

@@ -62,8 +62,11 @@ export default function FAQSection() {
                   <div className="text-xs font-mono text-green-400 mt-2">$ {faq.command}</div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="p-6 bg-white border-t border-gray-200 text-gray-600 leading-relaxed">
-                {faq.answer}
+              <AccordionContent className="p-6 bg-slate-900/70 border-t border-slate-600 text-gray-300 leading-relaxed">
+                <div className="bg-black/50 rounded-lg p-4 border border-slate-600">
+                  <div className="text-xs text-green-400 mb-2 font-mono">{'>'} output:</div>
+                  <div className="text-sm font-mono text-gray-300">{faq.answer}</div>
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}
