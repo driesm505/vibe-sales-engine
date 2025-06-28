@@ -1,55 +1,76 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Lightbulb, Code2, Rocket, CheckCircle, ArrowRight, Clock, Zap, Sparkles } from "lucide-react";
+import { MessageCircle, Lightbulb, Code2, Rocket, CheckCircle, ArrowRight, Clock, Zap, Sparkles, Terminal, GitBranch, Database, Cloud } from "lucide-react";
 
 export default function ProcessSection() {
   const processSteps = [
     {
       step: 1,
-      title: "Discovery Call",
-      icon: <MessageCircle className="text-white" size={24} />,
-      description: "We start with a free 30-minute consultation to understand your vision, goals, and requirements.",
+      title: "Requirements Analysis",
+      icon: <Terminal className="text-white" size={24} />,
+      description: "Technical discovery session to define scope, architecture, and API specifications.",
       duration: "30 minutes",
-      bgColor: "bg-purple-600",
-      progressColor: "#9333ea"
+      bgColor: "bg-slate-800",
+      progressColor: "#1e293b",
+      techDetails: ["API Design", "Database Schema", "System Architecture"],
+      codeSnippet: "$ npx create-vibe-mvp --init"
     },
     {
       step: 2,
-      title: "Strategy & Planning",
-      icon: <Lightbulb className="text-white" size={24} />,
-      description: "We create a detailed project plan with wireframes, tech stack recommendations, and timeline.",
+      title: "System Design",
+      icon: <GitBranch className="text-white" size={24} />,
+      description: "Complete technical blueprint with database models, API endpoints, and deployment strategy.",
       duration: "1-2 days",
-      bgColor: "bg-yellow-500",
-      progressColor: "#eab308"
+      bgColor: "bg-orange-600",
+      progressColor: "#ea580c",
+      techDetails: ["Database Design", "API Documentation", "Infrastructure Plan"],
+      codeSnippet: "$ git init && git remote add origin"
     },
     {
       step: 3,
       title: "Development Sprint",
       icon: <Code2 className="text-white" size={24} />,
-      description: "Our AI-enhanced development process builds your application with daily progress updates.",
+      description: "AI-accelerated development with continuous integration and automated testing.",
       duration: "3-7 days",
-      bgColor: "bg-trust-blue",
-      progressColor: "#0066cc"
+      bgColor: "bg-green-600",
+      progressColor: "#16a34a",
+      techDetails: ["Frontend & Backend", "CI/CD Pipeline", "Testing Suite"],
+      codeSnippet: "$ npm run build && npm test"
     },
     {
       step: 4,
-      title: "Launch & Delivery",
-      icon: <Rocket className="text-white" size={24} />,
-      description: "Your MVP goes live with full documentation, training, and ongoing support included.",
+      title: "Deployment & Monitoring",
+      icon: <Cloud className="text-white" size={24} />,
+      description: "Production deployment with monitoring, analytics, and comprehensive documentation.",
       duration: "1 day",
-      bgColor: "bg-vibe-green",
-      progressColor: "#4CAC77"
+      bgColor: "bg-blue-600",
+      progressColor: "#2563eb",
+      techDetails: ["Cloud Deployment", "Performance Monitoring", "Documentation"],
+      codeSnippet: "$ npm run deploy --production"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black relative overflow-hidden">
+      {/* Tech background pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-blue-500/5"></div>
+        </div>
+        <div className="absolute top-10 right-10 text-green-400/20 font-mono text-sm">
+          {'>'} npm run build
+        </div>
+        <div className="absolute bottom-20 left-10 text-blue-400/20 font-mono text-sm">
+          {'>'} git commit -m "feat: MVP ready"
+        </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-rich-black mb-6">
-            Our Proven Process
+          <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
+            <span className="text-green-400">&gt;</span> Our Tech Process
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            From initial consultation to successful launch — here's how we bring your idea to life in record time.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            From requirements analysis to production deployment — here's our technical workflow that delivers your MVP in 7 days.
           </p>
           
           {/* Overall Timeline Progress */}
