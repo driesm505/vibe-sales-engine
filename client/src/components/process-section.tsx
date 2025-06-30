@@ -1,58 +1,61 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, Lightbulb, Code2, Rocket, Clock } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export default function ProcessSection() {
+  const { t } = useLanguage();
+  
   const processSteps = [
     {
       step: 1,
-      title: "Intake Gesprek",
+      title: t.process.step1.title,
       icon: MessageCircle,
-      description: "Gratis 30-minuten gesprek om je idee, doelen en technische vereisten te bespreken.",
-      duration: "30 minuten",
-      details: ["Projectscope bepalen", "Technische analyse", "Tijdlijn vaststellen"],
+      description: t.process.step1.description,
+      duration: t.process.step1.duration,
+      details: t.process.step1.details,
       color: "from-blue-600 to-blue-700"
     },
     {
       step: 2,
-      title: "Ontwerp & Planning",
+      title: t.process.step2.title,
       icon: Lightbulb,
-      description: "Uitgewerkt plan met wireframes, technische architectuur en project roadmap.",
-      duration: "1-2 dagen",
-      details: ["UI/UX wireframes", "Database ontwerp", "API specificaties"],
+      description: t.process.step2.description,
+      duration: t.process.step2.duration,
+      details: t.process.step2.details,
       color: "from-purple-600 to-purple-700"
     },
     {
       step: 3,
-      title: "Ontwikkeling",
+      title: t.process.step3.title,
       icon: Code2,
-      description: "Professionele ontwikkeling met dagelijkse updates en tussentijdse reviews.",
-      duration: "3-7 dagen",
-      details: ["Frontend & Backend", "Testing & QA", "Performance optimalisatie"],
+      description: t.process.step3.description,
+      duration: t.process.step3.duration,
+      details: t.process.step3.details,
       color: "from-green-600 to-green-700"
     },
     {
       step: 4,
-      title: "Lancering & Overdracht",
+      title: t.process.step4.title,
       icon: Rocket,
-      description: "Live deployment met uitgebreide documentatie en training voor jouw team.",
-      duration: "1 dag",
-      details: ["Production deployment", "Documentatie", "30 dagen support"],
+      description: t.process.step4.description,
+      duration: t.process.step4.duration,
+      details: t.process.step4.details,
       color: "from-orange-600 to-orange-700"
     }
   ];
 
   return (
-    <section className="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="process" className="py-20 bg-slate-900 relative overflow-hidden">
       {/* Tech Background */}
       <div className="absolute inset-0 cyber-grid opacity-10"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">{'>'}</span> Ons Ontwikkelproces
+            <span className="text-green-400">{'>'}</span> {t.process.title}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto font-mono">
-            {'// '}Van idee tot live product in 7 dagen — transparant, professioneel en resultaatgericht
+            {'// '}{t.process.subtitle}
           </p>
         </div>
 

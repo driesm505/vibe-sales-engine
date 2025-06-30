@@ -11,28 +11,28 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="flex items-center space-x-2">
-      <Globe className="text-gray-600" size={16} />
-      <div className="flex bg-gray-100 rounded-lg p-1">
+      <Globe className="text-green-400" size={16} />
+      <div className="flex bg-slate-800 rounded-lg p-1 border border-slate-700">
         <Button
           size="sm"
-          variant={language === 'en' ? 'default' : 'ghost'}
+          variant="ghost"
           onClick={() => handleLanguageChange('en')}
-          className={`px-3 py-1 text-sm font-medium transition-all duration-200 ${
+          className={`px-3 py-1 text-sm font-medium transition-all duration-200 font-mono ${
             language === 'en' 
-              ? 'bg-white text-primary shadow-sm' 
-              : 'text-secondary hover:text-primary hover:bg-white/50'
+              ? 'bg-green-400 text-black shadow-sm' 
+              : 'text-gray-300 hover:text-green-400 hover:bg-slate-700'
           }`}
         >
           EN
         </Button>
         <Button
           size="sm"
-          variant={language === 'nl' ? 'default' : 'ghost'}
+          variant="ghost"
           onClick={() => handleLanguageChange('nl')}
-          className={`px-3 py-1 text-sm font-medium transition-all duration-200 ${
+          className={`px-3 py-1 text-sm font-medium transition-all duration-200 font-mono ${
             language === 'nl' 
-              ? 'bg-white text-primary shadow-sm' 
-              : 'text-secondary hover:text-primary hover:bg-white/50'
+              ? 'bg-green-400 text-black shadow-sm' 
+              : 'text-gray-300 hover:text-green-400 hover:bg-slate-700'
           }`}
         >
           NL

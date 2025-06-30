@@ -1,57 +1,60 @@
 import { CheckCircle, Clock, Users, Shield, Code2, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/lib/i18n";
 
 export default function WhyUsSection() {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: Clock,
-      title: "Snelle Levering",
-      description: "Van idee tot werkende MVP in slechts 7 dagen. Geen maanden wachten, maar directe resultaten.",
+      title: t.whyUs.fastDelivery.title,
+      description: t.whyUs.fastDelivery.description,
       gradient: "from-green-600 to-emerald-600"
     },
     {
       icon: Code2,
-      title: "Professionele Kwaliteit",
-      description: "Enterprise-grade code met TypeScript, testing en documentatie. Klaar voor productie en schaling.",
+      title: t.whyUs.professionalQuality.title,
+      description: t.whyUs.professionalQuality.description,
       gradient: "from-blue-600 to-cyan-600"
     },
     {
       icon: Users,
-      title: "Persoonlijke Benadering",
-      description: "Directe communicatie met de developers. Geen tussenpersonen, alleen heldere updates.",
+      title: t.whyUs.personalApproach.title,
+      description: t.whyUs.personalApproach.description,
       gradient: "from-purple-600 to-indigo-600"
     },
     {
       icon: Shield,
-      title: "Betrouwbare Partner",
-      description: "100+ tevreden klanten en 95% on-time delivery. Jouw succes is onze prioriteit.",
+      title: t.whyUs.reliablePartner.title,
+      description: t.whyUs.reliablePartner.description,
       gradient: "from-orange-600 to-red-600"
     },
     {
       icon: Zap,
-      title: "AI-Versneld",
-      description: "Geavanceerde AI-tools voor snellere ontwikkeling zonder concessies aan codekwaliteit.",
+      title: t.whyUs.aiAccelerated.title,
+      description: t.whyUs.aiAccelerated.description,
       gradient: "from-yellow-600 to-amber-600"
     },
     {
       icon: CheckCircle,
-      title: "Transparante Pricing",
-      description: "Vaste prijzen, geen verrassingen. Je weet vooraf exact wat je krijgt en wat het kost.",
+      title: t.whyUs.transparentPricing.title,
+      description: t.whyUs.transparentPricing.description,
       gradient: "from-pink-600 to-rose-600"
     }
   ];
 
   return (
-    <section className="py-20 bg-slate-800 relative overflow-hidden">
+    <section id="why-us" className="py-20 bg-slate-800 relative overflow-hidden">
       {/* Tech Background */}
       <div className="absolute inset-0 cyber-grid opacity-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">{'>'}</span> Waarom Vibe Coding?
+            <span className="text-green-400">{'>'}</span> {t.whyUs.title}
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto font-mono">
-            {'// '}Wij combineren snelheid, kwaliteit en transparantie voor ondernemers die serieus zijn over hun MVP
+            {'// '}{t.whyUs.subtitle}
           </p>
         </div>
 

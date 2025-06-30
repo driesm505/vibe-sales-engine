@@ -88,10 +88,16 @@ export default function Navigation() {
                   {t.nav.services}
                 </button>
                 <button 
-                  onClick={() => scrollToSection('testimonials')}
-                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
+                  onClick={() => scrollToSection('why-us')}
+                  className="text-left text-gray-300 hover:text-green-400 transition-colors font-medium"
                 >
-                  {t.nav.testimonials}
+                  {t.nav.whyUs}
+                </button>
+                <button 
+                  onClick={() => scrollToSection('process')}
+                  className="text-left text-gray-300 hover:text-green-400 transition-colors font-medium"
+                >
+                  {t.nav.process}
                 </button>
                 <button 
                   onClick={() => scrollToSection('pricing')}
