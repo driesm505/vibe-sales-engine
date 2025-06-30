@@ -500,9 +500,7 @@ export function useLanguage() {
   }, [language]);
 
   const switchLanguage = (newLanguage: Language) => {
-    console.log('switchLanguage called with:', newLanguage);
     setLanguage(newLanguage);
-    console.log('Language state updated to:', newLanguage);
   };
 
   const t = translations[language];

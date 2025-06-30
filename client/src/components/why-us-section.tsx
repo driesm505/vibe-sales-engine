@@ -3,8 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n";
 
 export default function WhyUsSection() {
-  const { t, language } = useLanguage();
-  console.log('WhyUsSection - Current language:', language, 'Translations:', t);
+  const { t } = useLanguage();
   
   const features = [
     {
