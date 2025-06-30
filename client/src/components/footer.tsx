@@ -11,18 +11,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center">
-                <Code className="text-white text-lg" size={20} />
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                <Code className="text-white" size={16} />
               </div>
-              <span className="text-2xl font-bold font-poppins">
-                <span className="text-green-400">{'<'}</span>Vibe<span className="text-green-400">{'/>'}</span>
+              <span className="text-xl font-bold">
+                Vibe<span className="text-green-400">Coding</span>
               </span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md font-mono text-sm">
-              {'// '} Enterprise-grade MVP development<br/>
-              {'// '} AI-accelerated, production-ready<br/>
-              {'// '} TypeScript + modern architecture
+            <p className="text-gray-400 mb-6 max-w-md text-sm leading-relaxed">
+              Enterprise-grade development solutions for innovative businesses. From MVP to scale, we deliver production-ready applications that drive growth.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-colors duration-300 border border-slate-700">

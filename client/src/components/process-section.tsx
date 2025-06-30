@@ -51,11 +51,11 @@ export default function ProcessSection() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">{'>'}</span> {t.process.title}
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            {t.process.title}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-mono">
-            {'// '}{t.process.subtitle}
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            {t.process.subtitle}
           </p>
         </div>
 
@@ -79,14 +79,14 @@ export default function ProcessSection() {
                   </div>
                   
                   {/* Card */}
-                  <Card className="bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm hover:border-green-400/50 transition-all duration-300">
+                  <Card className="bg-slate-800/50 border border-slate-700/50 rounded-xl backdrop-blur-sm hover:border-green-400/30 transition-all duration-200">
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4 leading-relaxed">{step.description}</p>
+                      <h3 className="text-lg font-semibold text-white mb-3">{step.title}</h3>
+                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">{step.description}</p>
                       
-                      <div className="flex items-center justify-center mb-4">
-                        <Clock className="text-green-400 mr-2" size={16} />
-                        <span className="text-green-400 font-mono text-sm">{step.duration}</span>
+                      <div className="flex items-center justify-center mb-3">
+                        <Clock className="text-green-400 mr-2" size={14} />
+                        <span className="text-green-400 text-sm">{step.duration}</span>
                       </div>
                       
                       <div className="space-y-2">
