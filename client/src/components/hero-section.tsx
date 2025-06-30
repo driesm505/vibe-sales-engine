@@ -6,7 +6,8 @@ import { useLanguage } from "@/lib/i18n";
 import { useState, useEffect } from "react";
 
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  console.log('Hero section current language:', language);
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   

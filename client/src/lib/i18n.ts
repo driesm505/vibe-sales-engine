@@ -484,26 +484,40 @@ export const translations = {
   },
 };
 
+// Global language state
+let globalLanguage: Language = 'nl';
+let globalListeners: Array<() => void> = [];
+
 export function useLanguage() {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('language');
-      return (saved as Language) || 'nl'; // Default to Dutch
-    }
-    return 'nl';
-  });
+  const [language, setLanguage] = useState<Language>(globalLanguage);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('language', language);
-    }
-  }, [language]);
+    const listener = () => setLanguage(globalLanguage);
+    globalListeners.push(listener);
+    
+    return () => {
+      globalListeners = globalListeners.filter(l => l !== listener);
+    };
+  }, []);
 
   const switchLanguage = (newLanguage: Language) => {
-    setLanguage(newLanguage);
+    globalLanguage = newLanguage;
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', newLanguage);
+    }
+    // Notify all components
+    globalListeners.forEach(listener => listener());
   };
 
   const t = translations[language];
 
   return { language, switchLanguage, t };
+}
+
+// Initialize from localStorage
+if (typeof window !== 'undefined') {
+  const saved = localStorage.getItem('language');
+  if (saved && (saved === 'en' || saved === 'nl')) {
+    globalLanguage = saved;
+  }
 }
