@@ -32,28 +32,34 @@ export default function Navigation() {
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
+              onClick={() => scrollToSection('why-us')}
+              className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
+            >
+              ./{t.nav.whyUs.toLowerCase().replace(' ', '-')}
+            </button>
+            <button 
               onClick={() => scrollToSection('services')}
               className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              ./services
+              ./{t.nav.services.toLowerCase()}
             </button>
             <button 
-              onClick={() => scrollToSection('testimonials')}
+              onClick={() => scrollToSection('process')}
               className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              ./reviews
+              ./{t.nav.process.toLowerCase()}
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
               className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              ./pricing
+              ./{t.nav.pricing.toLowerCase()}
             </button>
             <button 
               onClick={() => scrollToSection('faq')}
               className="text-gray-300 hover:text-green-400 transition-colors font-medium font-mono"
             >
-              ./docs
+              ./{t.nav.faq.toLowerCase()}
             </button>
             <LanguageSwitcher />
             <Button 

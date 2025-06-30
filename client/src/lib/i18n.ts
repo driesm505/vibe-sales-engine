@@ -7,9 +7,11 @@ export const translations = {
     // Navigation
     nav: {
       services: 'Services',
-      testimonials: 'Testimonials',
+      whyUs: 'Why Us',
       pricing: 'Pricing',
       faq: 'FAQ',
+      process: 'Process',
+      contact: 'Contact',
       getStarted: 'Get Started',
     },
     // Hero Section
@@ -106,63 +108,62 @@ export const translations = {
         ],
       },
     },
-    // Why Choose Us
-    whyChoose: {
-      title: 'Built with AI, Backed by Experience',
-      subtitle: 'We accelerate your development with cutting-edge AI tools to move fast — without compromising on code quality. Our developers follow modern best practices, ensuring your app is easy to scale, maintain, and hand off to future teams.',
-      mvpWeek: {
-        title: 'MVP\'s in Less Than a Week',
-        description: 'From concept to working product faster than you thought possible — powered by advanced AI development tools.',
+    // Why Us Section
+    whyUs: {
+      title: 'Why Choose Vibe Coding?',
+      subtitle: 'We combine speed, quality and transparency for entrepreneurs serious about their MVP',
+      fastDelivery: {
+        title: 'Fast Delivery',
+        description: 'From idea to working MVP in just 7 days. No months of waiting, but immediate results.',
       },
-      aiWorkflows: {
-        title: 'AI-Enhanced Workflows',
-        description: 'Advanced AI tools for speed and precision in development while maintaining high standards and best practices.',
+      professionalQuality: {
+        title: 'Professional Quality',
+        description: 'Enterprise-grade code with TypeScript, testing and documentation. Ready for production and scaling.',
       },
-      productionCode: {
-        title: 'Production-Ready Code',
-        description: 'Fully maintainable code that scales with your success — built with modern architecture patterns.',
+      personalApproach: {
+        title: 'Personal Approach',
+        description: 'Direct communication with the developers. No middlemen, just clear updates.',
       },
-      communication: {
-        title: 'Clear Communication',
-        description: 'No tech jargon — just clear communication and regular updates throughout your project development.',
+      reliablePartner: {
+        title: 'Reliable Partner',
+        description: '100+ satisfied clients and 95% on-time delivery. Your success is our priority.',
       },
-      founderFirst: {
-        title: 'Founder-First Mentality',
-        description: 'Friendly, flexible approach focused on your success — we understand the startup journey.',
+      aiAccelerated: {
+        title: 'AI-Accelerated',
+        description: 'Advanced AI tools for faster development without compromising code quality.',
       },
-      excellence: {
-        title: 'Technical Excellence',
-        description: 'Industry best practices and high code quality standards maintained throughout the development process.',
+      transparentPricing: {
+        title: 'Transparent Pricing',
+        description: 'Fixed prices, no surprises. You know exactly what you get and what it costs.',
       },
     },
     // Process Section
     process: {
-      title: 'Our Proven Process',
-      subtitle: 'From initial consultation to successful launch — here\'s how we bring your idea to life in record time.',
+      title: 'Our Development Process',
+      subtitle: 'From idea to live product in 7 days — transparent, professional and result-oriented',
       step1: {
-        title: 'Discovery Call',
-        description: 'We start with a free 30-minute consultation to understand your vision, goals, and requirements.',
+        title: 'Intake Meeting',
+        description: 'Free 30-minute consultation to discuss your idea, goals and technical requirements.',
         duration: '30 minutes',
+        details: ['Define project scope', 'Technical analysis', 'Set timeline']
       },
       step2: {
-        title: 'Strategy & Planning',
-        description: 'We create a detailed project plan with wireframes, tech stack recommendations, and timeline.',
+        title: 'Design & Planning',
+        description: 'Detailed plan with wireframes, technical architecture and project roadmap.',
         duration: '1-2 days',
+        details: ['UI/UX wireframes', 'Database design', 'API specifications']
       },
       step3: {
-        title: 'Development Sprint',
-        description: 'Our AI-enhanced development process builds your application with daily progress updates.',
+        title: 'Development',
+        description: 'Professional development with daily updates and intermediate reviews.',
         duration: '3-7 days',
+        details: ['Frontend & Backend', 'Testing & QA', 'Performance optimization']
       },
       step4: {
-        title: 'Launch & Support',
-        description: 'We deploy your application and provide post-launch support to ensure everything runs smoothly.',
-        duration: '1 day + ongoing',
-      },
-      cta: {
-        title: 'Ready to Start Your Project?',
-        subtitle: 'Book a free consultation and get your custom project timeline today.',
-        button: 'Book Free Strategy Call',
+        title: 'Launch & Handover',
+        description: 'Live deployment with comprehensive documentation and training for your team.',
+        duration: '1 day',
+        details: ['Production deployment', 'Documentation', '30 days support']
       },
     },
     // Pricing Section
@@ -243,9 +244,11 @@ export const translations = {
     // Navigation
     nav: {
       services: 'Diensten',
-      testimonials: 'Testimonials',
+      whyUs: 'Waarom Ons',
       pricing: 'Prijzen',
       faq: 'FAQ',
+      process: 'Proces',
+      contact: 'Contact',
       getStarted: 'Aan de Slag',
     },
     // Hero Section
@@ -342,58 +345,62 @@ export const translations = {
         ],
       },
     },
-    // Why Choose Us
-    whyChoose: {
-      title: 'Gebouwd met AI, Ondersteund door Ervaring',
-      subtitle: 'We versnellen je ontwikkeling met geavanceerde AI-tools om snel te bewegen — zonder concessies te doen aan codekwaliteit. Onze ontwikkelaars volgen moderne best practices, zodat je app gemakkelijk te schalen, onderhouden en overdragen is aan toekomstige teams.',
-      mvpWeek: {
-        title: 'MVP\'s in Minder Dan een Week',
-        description: 'Van concept tot werkend product sneller dan je voor mogelijk hield — aangedreven door geavanceerde AI ontwikkeltools.',
+    // Why Us Section
+    whyUs: {
+      title: 'Waarom Vibe Coding?',
+      subtitle: 'Wij combineren snelheid, kwaliteit en transparantie voor ondernemers die serieus zijn over hun MVP',
+      fastDelivery: {
+        title: 'Snelle Levering',
+        description: 'Van idee tot werkende MVP in slechts 7 dagen. Geen maanden wachten, maar directe resultaten.',
       },
-      aiWorkflows: {
-        title: 'AI-Verbeterde Workflows',
-        description: 'Geavanceerde AI-tools voor snelheid en precisie in ontwikkeling terwijl hoge standaarden en best practices worden gehandhaafd.',
+      professionalQuality: {
+        title: 'Professionele Kwaliteit',
+        description: 'Enterprise-grade code met TypeScript, testing en documentatie. Klaar voor productie en schaling.',
       },
-      productionCode: {
-        title: 'Productie-Klare Code',
-        description: 'Volledig onderhoudbare code die schaalt met je succes — gebouwd met moderne architectuur patronen.',
+      personalApproach: {
+        title: 'Persoonlijke Benadering',
+        description: 'Directe communicatie met de developers. Geen tussenpersonen, alleen heldere updates.',
       },
-      communication: {
-        title: 'Duidelijke Communicatie',
-        description: 'Geen tech jargon — alleen duidelijke communicatie en regelmatige updates tijdens je projectontwikkeling.',
+      reliablePartner: {
+        title: 'Betrouwbare Partner',
+        description: '100+ tevreden klanten en 95% on-time delivery. Jouw succes is onze prioriteit.',
       },
-      founderFirst: {
-        title: 'Oprichter-Eerste Mentaliteit',
-        description: 'Vriendelijke, flexibele aanpak gericht op jouw succes — wij begrijpen de startup reis.',
+      aiAccelerated: {
+        title: 'AI-Versneld',
+        description: 'Geavanceerde AI-tools voor snellere ontwikkeling zonder concessies aan codekwaliteit.',
       },
-      excellence: {
-        title: 'Technische Excellentie',
-        description: 'Industrie best practices en hoge codekwaliteit standaarden gehandhaafd tijdens het hele ontwikkelingsproces.',
+      transparentPricing: {
+        title: 'Transparante Pricing',
+        description: 'Vaste prijzen, geen verrassingen. Je weet vooraf exact wat je krijgt en wat het kost.',
       },
     },
     // Process Section
     process: {
-      title: 'Ons Bewezen Proces',
-      subtitle: 'Van initiële consultatie tot succesvolle lancering — zo brengen we je idee in recordtijd tot leven.',
+      title: 'Ons Ontwikkelproces',
+      subtitle: 'Van idee tot live product in 7 dagen — transparant, professioneel en resultaatgericht',
       step1: {
-        title: 'Ontdekkingsgesprek',
-        description: 'We beginnen met een gratis 30-minuten consultatie om je visie, doelen en vereisten te begrijpen.',
+        title: 'Intake Gesprek',
+        description: 'Gratis 30-minuten gesprek om je idee, doelen en technische vereisten te bespreken.',
         duration: '30 minuten',
+        details: ['Projectscope bepalen', 'Technische analyse', 'Tijdlijn vaststellen']
       },
       step2: {
-        title: 'Strategie & Planning',
-        description: 'We maken een gedetailleerd projectplan met wireframes, tech stack aanbevelingen en tijdlijn.',
+        title: 'Ontwerp & Planning',
+        description: 'Uitgewerkt plan met wireframes, technische architectuur en project roadmap.',
         duration: '1-2 dagen',
+        details: ['UI/UX wireframes', 'Database ontwerp', 'API specificaties']
       },
       step3: {
-        title: 'Ontwikkelings Sprint',
-        description: 'Ons AI-verbeterde ontwikkelingsproces bouwt je applicatie met dagelijkse voortgangsupdates.',
+        title: 'Ontwikkeling',
+        description: 'Professionele ontwikkeling met dagelijkse updates en tussentijdse reviews.',
         duration: '3-7 dagen',
+        details: ['Frontend & Backend', 'Testing & QA', 'Performance optimalisatie']
       },
       step4: {
-        title: 'Lancering & Support',
-        description: 'We deployen je applicatie en bieden post-lancering support om ervoor te zorgen dat alles soepel loopt.',
-        duration: '1 dag + doorlopend',
+        title: 'Lancering & Overdracht',
+        description: 'Live deployment met uitgebreide documentatie en training voor jouw team.',
+        duration: '1 dag',
+        details: ['Production deployment', 'Documentatie', '30 dagen support']
       },
       cta: {
         title: 'Klaar om Je Project te Starten?',
