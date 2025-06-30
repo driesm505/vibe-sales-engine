@@ -22,11 +22,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-vibe-green rounded-lg flex items-center justify-center">
               <Code className="text-white" size={16} />
             </div>
             <span className="text-xl font-bold text-white">
-              Vibe<span className="text-green-400">Coding</span>
+              Vibe<span className="text-vibe-green">Coding</span>
             </span>
           </div>
           
@@ -64,7 +64,7 @@ export default function Navigation() {
             <LanguageSwitcher />
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-green-600 hover:bg-green-500 text-black px-6 py-2 rounded-lg font-semibold transition-all duration-200"
+              className="bg-vibe-green hover:bg-vibe-green/90 text-black px-6 py-2 rounded-lg font-semibold transition-all duration-200"
             >
               {t.nav.getStarted}
             </Button>
