@@ -2,7 +2,7 @@ import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import WhyUsSection from "@/components/why-us-section";
 import ServicesSection from "@/components/services-section";
-import ProcessSection from "@/components/process-section-new";
+import ProcessSection from "@/components/process-section";
 import PricingSection from "@/components/pricing-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";

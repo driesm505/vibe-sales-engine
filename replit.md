@@ -102,20 +102,17 @@ This is a modern marketing website for Vibe Coding Agency, built as a full-stack
 - Static file serving capability
 
 ## Recent Changes
-- June 28, 2025: Complete tech-focused website transformation and UI/UX improvements:
-  - **Fixed White Button Issue**: Updated video modal button to use green accent colors matching tech theme
-  - **Improved Language Consistency**: Enhanced Dutch translations throughout the site for better UX
-  - **Unified Tech Theme**: Dark slate/black backgrounds with green accent colors throughout all sections
-  - **Enhanced Hero Section**: Added terminal aesthetics with typing animation and tech-focused styling
-  - **Tech-Enhanced Navigation**: Terminal-style navigation with command references (./services, ./pricing, ./docs)
-  - **Developer-Focused Design**: Auto-playing video with "LIVE DEMO" badge and consistent terminal styling
-  - **Tech Stack Integration**: Comprehensive pricing section with tech stacks, code snippets, and deployment commands
-  - **Terminal-Style Components**: All sections redesigned with consistent terminal windows and command prompts
-  - **Technical Documentation**: FAQ section with command examples and terminal output formatting
-  - **Code-Focused Footer**: Terminal tree structure and developer-oriented social links
-  - **Advanced Animations**: Matrix rain effects, particle systems, cyber grids, and holographic gradients
-  - **Consistent Background**: Unified cyber grid pattern and tech aesthetics across all sections
-  - **Enterprise Positioning**: Content shifted to emphasize enterprise-grade architecture and DevOps practices
+- June 28, 2025: Website cleanup and content optimization:
+  - **Added Why Us Section**: New professional section highlighting key benefits in Dutch
+  - **Removed Unnecessary Sections**: Cleaned up by removing Statistics, Tech Stack, and Testimonials sections
+  - **Improved Process Section**: Completely redesigned with cleaner, more professional 4-step process
+  - **Enhanced Language Consistency**: Better Dutch translations and content throughout
+  - **Cleaner UI Design**: Maintained tech theme while simplifying content structure
+  - **Professional Process Steps**: Streamlined from complex technical details to clear business-focused steps
+  - **Consistent Tech Aesthetics**: Dark slate backgrounds with green accents across all remaining sections
+  - **Better Content Flow**: Hero → Why Us → Services → Process → Pricing → FAQ → Contact
+  - **Fixed Video Button**: Green tech-themed styling for better UI consistency
+  - **Optimized Page Structure**: Removed clutter while maintaining professional tech appearance
 
 ## Changelog
 - June 28, 2025: Initial setup and full website development
