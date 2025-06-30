@@ -6,6 +6,7 @@ export default function LanguageSwitcher() {
   const { language, switchLanguage } = useLanguage();
 
   const handleLanguageChange = (newLanguage: Language) => {
+    console.log('Switching language to:', newLanguage);
     switchLanguage(newLanguage);
   };
 

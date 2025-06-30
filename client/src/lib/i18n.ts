@@ -486,13 +486,23 @@ export const translations = {
 
 export function useLanguage() {
   const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem('language');
-    return (saved as Language) || 'en';
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('language');
+      return (saved as Language) || 'nl'; // Default to Dutch
+    }
+    return 'nl';
   });
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', language);
+    }
+  }, [language]);
+
   const switchLanguage = (newLanguage: Language) => {
+    console.log('switchLanguage called with:', newLanguage);
     setLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
+    console.log('Language state updated to:', newLanguage);
   };
 
   const t = translations[language];
