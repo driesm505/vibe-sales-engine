@@ -160,11 +160,11 @@ export default function ServicesSection() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-              <span className="text-green-400">{'>'}</span> Our Tech Stack
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Our Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Modern development services powered by cutting-edge technology and AI-enhanced workflows.
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Enterprise-grade development solutions designed for growing businesses and innovative startups.
             </p>
             
             

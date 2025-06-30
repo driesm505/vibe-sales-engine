@@ -42,40 +42,39 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white animate-fade-in-up">
-            <div className="mb-4">
-              <span className="text-sm font-mono text-green-400 bg-slate-800 px-3 py-1 rounded-full border border-green-400/30">
-                LIVE DEMO
+            <div className="mb-6">
+              <span className="text-xs font-semibold tracking-wider text-green-400 bg-slate-800/50 px-4 py-2 rounded-lg border border-green-400/20 backdrop-blur-sm">
+                ENTERPRISE READY
               </span>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold font-poppins leading-tight mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-white">
               {t.hero.title} <span className="text-green-400">{t.hero.titleHighlight}</span> {t.hero.titleEnd}
             </h1>
-            <p className="text-xl lg:text-2xl mb-8 text-gray-300 leading-relaxed font-mono">
-              {'// '}{t.hero.subtitle}
+            <p className="text-lg lg:text-xl mb-8 text-gray-400 leading-relaxed max-w-2xl">
+              {t.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-green-600 hover:bg-green-500 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
+                className="bg-green-600 hover:bg-green-500 text-black px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                <Terminal className="mr-2" size={20} />
-                $ {t.hero.shareIdea.toLowerCase()}
+                {t.hero.shareIdea}
               </Button>
               <VideoModal videoId="dQw4w9WgXcQ" />
             </div>
-            <div className="flex flex-wrap items-center gap-6 text-gray-300 font-mono text-sm">
-              <div className="flex items-center">
-                <ChevronRight className="text-green-400 mr-2" size={16} />
-                <span>{t.hero.features.delivery}</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-400 text-sm">
+              <div className="flex items-center bg-slate-800/30 px-4 py-3 rounded-lg border border-slate-700/50">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                <span className="font-medium">{t.hero.features.delivery}</span>
               </div>
-              <div className="flex items-center">
-                <ChevronRight className="text-green-400 mr-2" size={16} />
-                <span>{t.hero.features.production}</span>
+              <div className="flex items-center bg-slate-800/30 px-4 py-3 rounded-lg border border-slate-700/50">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                <span className="font-medium">{t.hero.features.production}</span>
               </div>
-              <div className="flex items-center">
-                <ChevronRight className="text-green-400 mr-2" size={16} />
-                <span>{t.hero.features.ai}</span>
+              <div className="flex items-center bg-slate-800/30 px-4 py-3 rounded-lg border border-slate-700/50">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                <span className="font-medium">{t.hero.features.ai}</span>
               </div>
             </div>
             <div className="mt-6 text-xs font-mono text-green-400">
