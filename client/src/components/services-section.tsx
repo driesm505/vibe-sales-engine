@@ -83,7 +83,7 @@ export default function ServicesSection() {
         "Docker containerization & cloud deployment"
       ],
       bgColor: "bg-slate-800",
-      buttonColor: "bg-slate-800 hover:bg-slate-700",
+      buttonColor: "bg-vibe-green hover:bg-vibe-green/90 text-black",
       techStack: ["React", "Node.js", "PostgreSQL", "Docker"],
       completedCount: mvpCount,
       codeSnippet: "$ npx create-vibe-mvp --stack=full"
@@ -99,8 +99,8 @@ export default function ServicesSection() {
         "Real-time features with WebSocket integration",
         "Performance optimization & SEO implementation"
       ],
-      bgColor: "bg-blue-700",
-      buttonColor: "bg-blue-700 hover:bg-blue-600",
+      bgColor: "bg-slate-800",
+      buttonColor: "bg-trust-blue hover:bg-trust-blue/90 text-white",
       techStack: ["Next.js", "GraphQL", "Redis", "AWS"],
       completedCount: webAppCount,
       codeSnippet: "$ npm create next-app --typescript"
@@ -116,8 +116,8 @@ export default function ServicesSection() {
         "A/B testing framework implementation", 
         "Lighthouse performance score 90+"
       ],
-      bgColor: "bg-green-700",
-      buttonColor: "bg-green-700 hover:bg-green-600",
+      bgColor: "bg-slate-800",
+      buttonColor: "bg-sage-green hover:bg-sage-green/90 text-white",
       techStack: ["React", "Vercel", "Analytics", "Testing"],
       completedCount: landingCount,
       codeSnippet: "$ npm run build && npm run analyze"

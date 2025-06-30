@@ -12,11 +12,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-vibe-green rounded-lg flex items-center justify-center">
                 <Code className="text-white" size={16} />
               </div>
               <span className="text-xl font-bold">
-                Vibe<span className="text-green-400">Coding</span>
+                Vibe<span className="text-vibe-green">Coding</span>
               </span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md text-sm leading-relaxed">

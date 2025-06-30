@@ -43,12 +43,12 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white animate-fade-in-up">
             <div className="mb-6">
-              <span className="text-xs font-semibold tracking-wider text-green-400 bg-slate-800/50 px-4 py-2 rounded-lg border border-green-400/20 backdrop-blur-sm">
+              <span className="text-xs font-semibold tracking-wider text-vibe-green bg-slate-800/50 px-4 py-2 rounded-lg border border-vibe-green/20 backdrop-blur-sm">
                 ENTERPRISE READY
               </span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-white">
-              {t.hero.title} <span className="text-green-400">{t.hero.titleHighlight}</span> {t.hero.titleEnd}
+              {t.hero.title} <span className="text-vibe-green">{t.hero.titleHighlight}</span> {t.hero.titleEnd}
             </h1>
             <p className="text-lg lg:text-xl mb-8 text-gray-400 leading-relaxed max-w-2xl">
               {t.hero.subtitle}
@@ -57,7 +57,7 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-green-600 hover:bg-green-500 text-black px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-vibe-green hover:bg-vibe-green/90 text-black px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {t.hero.shareIdea}
               </Button>
@@ -65,15 +65,15 @@ export default function HeroSection() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-400 text-sm">
               <div className="flex items-center bg-slate-800/30 px-4 py-3 rounded-lg border border-slate-700/50">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                <div className="w-2 h-2 bg-vibe-green rounded-full mr-3"></div>
                 <span className="font-medium">{t.hero.features.delivery}</span>
               </div>
               <div className="flex items-center bg-slate-800/30 px-4 py-3 rounded-lg border border-slate-700/50">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                <div className="w-2 h-2 bg-trust-blue rounded-full mr-3"></div>
                 <span className="font-medium">{t.hero.features.production}</span>
               </div>
               <div className="flex items-center bg-slate-800/30 px-4 py-3 rounded-lg border border-slate-700/50">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                <div className="w-2 h-2 bg-sage-green rounded-full mr-3"></div>
                 <span className="font-medium">{t.hero.features.ai}</span>
               </div>
             </div>
