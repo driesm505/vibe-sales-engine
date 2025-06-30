@@ -1,51 +1,43 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Lightbulb, Code2, Rocket, CheckCircle, ArrowRight, Clock, Zap, Sparkles, Terminal, GitBranch, Database, Cloud } from "lucide-react";
+import { MessageCircle, Lightbulb, Code2, Rocket, Clock } from "lucide-react";
 
 export default function ProcessSection() {
   const processSteps = [
     {
       step: 1,
-      title: "Requirements Analysis",
-      icon: <Terminal className="text-white" size={24} />,
-      description: "Technical discovery session to define scope, architecture, and API specifications.",
-      duration: "30 minutes",
-      bgColor: "bg-slate-800",
-      progressColor: "#1e293b",
-      techDetails: ["API Design", "Database Schema", "System Architecture"],
-      codeSnippet: "$ npx create-vibe-mvp --init"
+      title: "Intake Gesprek",
+      icon: MessageCircle,
+      description: "Gratis 30-minuten gesprek om je idee, doelen en technische vereisten te bespreken.",
+      duration: "30 minuten",
+      details: ["Projectscope bepalen", "Technische analyse", "Tijdlijn vaststellen"],
+      color: "from-blue-600 to-blue-700"
     },
     {
       step: 2,
-      title: "System Design",
-      icon: <GitBranch className="text-white" size={24} />,
-      description: "Complete technical blueprint with database models, API endpoints, and deployment strategy.",
-      duration: "1-2 days",
-      bgColor: "bg-orange-600",
-      progressColor: "#ea580c",
-      techDetails: ["Database Design", "API Documentation", "Infrastructure Plan"],
-      codeSnippet: "$ git init && git remote add origin"
+      title: "Ontwerp & Planning",
+      icon: Lightbulb,
+      description: "Uitgewerkt plan met wireframes, technische architectuur en project roadmap.",
+      duration: "1-2 dagen",
+      details: ["UI/UX wireframes", "Database ontwerp", "API specificaties"],
+      color: "from-purple-600 to-purple-700"
     },
     {
       step: 3,
-      title: "Development Sprint",
-      icon: <Code2 className="text-white" size={24} />,
-      description: "AI-accelerated development with continuous integration and automated testing.",
-      duration: "3-7 days",
-      bgColor: "bg-green-600",
-      progressColor: "#16a34a",
-      techDetails: ["Frontend & Backend", "CI/CD Pipeline", "Testing Suite"],
-      codeSnippet: "$ npm run build && npm test"
+      title: "Ontwikkeling",
+      icon: Code2,
+      description: "Professionele ontwikkeling met dagelijkse updates en tussentijdse reviews.",
+      duration: "3-7 dagen",
+      details: ["Frontend & Backend", "Testing & QA", "Performance optimalisatie"],
+      color: "from-green-600 to-green-700"
     },
     {
       step: 4,
-      title: "Deployment & Monitoring",
-      icon: <Cloud className="text-white" size={24} />,
-      description: "Production deployment with monitoring, analytics, and comprehensive documentation.",
-      duration: "1 day",
-      bgColor: "bg-blue-600",
-      progressColor: "#2563eb",
-      techDetails: ["Cloud Deployment", "Performance Monitoring", "Documentation"],
-      codeSnippet: "$ npm run deploy --production"
+      title: "Lancering & Overdracht",
+      icon: Rocket,
+      description: "Live deployment met uitgebreide documentatie en training voor jouw team.",
+      duration: "1 dag",
+      details: ["Production deployment", "Documentatie", "30 dagen support"],
+      color: "from-orange-600 to-orange-700"
     }
   ];
 
