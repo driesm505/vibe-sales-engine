@@ -60,10 +60,10 @@ export default function WhyUsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-slate-900/50 border border-slate-700/50 rounded-xl backdrop-blur-sm hover:border-green-400/30 transition-all duration-200">
+            <Card key={index} className="bg-slate-900/50 border border-slate-700/50 rounded-xl backdrop-blur-sm hover:border-vibe-green/30 transition-all duration-200">
               <CardContent className="p-6">
-                <div className="w-12 h-12 mb-4 bg-green-600/10 rounded-lg flex items-center justify-center border border-green-600/20">
-                  <feature.icon className="text-green-400" size={24} />
+                <div className="w-12 h-12 mb-4 bg-vibe-green/10 rounded-lg flex items-center justify-center border border-vibe-green/20">
+                  <feature.icon className={`${index % 3 === 0 ? 'text-vibe-green' : index % 3 === 1 ? 'text-trust-blue' : 'text-sage-green'}`} size={24} />
                 </div>
                 <h3 className="text-lg font-semibold mb-3 text-white">
                   {feature.title}
