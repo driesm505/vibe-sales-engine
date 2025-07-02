@@ -13,7 +13,7 @@ export default function ProcessSection() {
       description: t.process.step1.description,
       duration: t.process.step1.duration,
       details: t.process.step1.details,
-      color: "from-blue-600 to-blue-700"
+      color: "from-trust-blue to-trust-blue/80"
     },
     {
       step: 2,
@@ -22,7 +22,7 @@ export default function ProcessSection() {
       description: t.process.step2.description,
       duration: t.process.step2.duration,
       details: t.process.step2.details,
-      color: "from-purple-600 to-purple-700"
+      color: "from-sage-green to-sage-green/80"
     },
     {
       step: 3,
@@ -31,7 +31,7 @@ export default function ProcessSection() {
       description: t.process.step3.description,
       duration: t.process.step3.duration,
       details: t.process.step3.details,
-      color: "from-green-600 to-green-700"
+      color: "from-vibe-green to-vibe-green/80"
     },
     {
       step: 4,
@@ -40,7 +40,7 @@ export default function ProcessSection() {
       description: t.process.step4.description,
       duration: t.process.step4.duration,
       details: t.process.step4.details,
-      color: "from-orange-600 to-orange-700"
+      color: "from-conversion-orange to-conversion-orange/80"
     }
   ];
 
@@ -63,7 +63,7 @@ export default function ProcessSection() {
         <div className="hidden lg:block">
           <div className="relative">
             {/* Connection Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-green-500 to-orange-500 transform -translate-y-1/2 z-0"></div>
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-trust-blue via-sage-green via-vibe-green to-conversion-orange transform -translate-y-1/2 z-0 shadow-lg"></div>
             
             <div className="grid grid-cols-4 gap-8 relative z-10">
               {processSteps.map((step, index) => (

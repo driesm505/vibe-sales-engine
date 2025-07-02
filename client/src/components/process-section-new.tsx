@@ -52,7 +52,7 @@ export default function ProcessSection() {
             <span className="text-vibe-green">{'>'}</span> Ons Ontwikkelproces
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto font-mono">
-            {'// '}Van idee tot live product in 7 dagen — transparant, professioneel en resultaatgericht
+            <span className="text-vibe-green">{'// '}</span>Van idee tot live product in 7 dagen — transparant, professioneel en resultaatgericht
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function ProcessSection() {
         <div className="hidden lg:block">
           <div className="relative">
             {/* Connection Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-green-500 to-orange-500 transform -translate-y-1/2 z-0"></div>
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-trust-blue via-sage-green via-vibe-green to-conversion-orange transform -translate-y-1/2 z-0 shadow-lg"></div>
             
             <div className="grid grid-cols-4 gap-8 relative z-10">
               {processSteps.map((step, index) => (
@@ -131,7 +131,7 @@ export default function ProcessSection() {
                     <div className="space-y-2">
                       {step.details.map((detail, detailIndex) => (
                         <div key={detailIndex} className="flex items-center text-xs text-gray-400">
-                          <div className="w-1 h-1 bg-green-400 rounded-full mr-2"></div>
+                          <div className="w-1 h-1 bg-vibe-green rounded-full mr-2"></div>
                           {detail}
                         </div>
                       ))}
