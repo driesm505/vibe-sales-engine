@@ -40,7 +40,7 @@ export default function WhyUsSection() {
       icon: CheckCircle,
       title: t.whyUs.transparentPricing.title,
       description: t.whyUs.transparentPricing.description,
-      gradient: "from-pink-600 to-rose-600"
+      gradient: "from-sage-green to-conversion-orange"
     }
   ];
 

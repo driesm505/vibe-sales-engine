@@ -269,7 +269,7 @@ export default function ServicesSection() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-vibe-green to-sage-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="text-white text-2xl" />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-white mb-4">Fast Development</h3>
@@ -277,7 +277,7 @@ export default function ServicesSection() {
             </div>
 
             <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-trust-blue to-vibe-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="text-white text-2xl" />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-white mb-4">Production Ready</h3>
@@ -285,7 +285,7 @@ export default function ServicesSection() {
             </div>
 
             <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-conversion-orange to-sage-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Cloud className="text-white text-2xl" />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-white mb-4">Cloud Native</h3>
