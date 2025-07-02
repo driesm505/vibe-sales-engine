@@ -102,6 +102,18 @@ This is a modern marketing website for Vibe Coding Agency, built as a full-stack
 - Static file serving capability
 
 ## Recent Changes
+- July 2, 2025: Enhanced demo and process section styling with additional green accents:
+  - **"Bekijk Demo" Button Enhancement**: Updated VideoModal trigger button with vibe-green styling, shadow effects, and improved hover states
+  - **"Ons Ontwikkelproces" Section Improvements**: Added extensive vibe-green accents throughout process section
+  - **Process Section Headers**: Updated section title and subtitle with vibe-green highlighting for code syntax elements
+  - **Step Number Indicators**: All step number badges now use consistent vibe-green background with shadow effects
+  - **Timeline Connection**: Updated connection line gradient to use brand color progression (trust-blue → sage-green → vibe-green → conversion-orange)
+  - **Clock Icons and Duration**: All timing elements now use vibe-green color for consistency
+  - **Detail Bullet Points**: Updated all detail list indicators to use vibe-green dots
+  - **Card Hover Effects**: Added vibe-green border and shadow effects on hover for all process cards
+  - **Both Process Components**: Updated both process-section.tsx and process-section-new.tsx for consistent styling
+  - **Mobile Layout Improvements**: Applied same vibe-green enhancements to mobile responsive layouts
+
 - June 30, 2025: Landing page optimization and UI consistency improvements:
   - **Hero Section Refinement**: Removed "Bekijk Demo" button and updated "Deel je idee" button with professional glass-morphism styling
   - **Interactive Demo Video**: Added auto-playing mockup video in the hero section laptop mockup for engaging user experience
