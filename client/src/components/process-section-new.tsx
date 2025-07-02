@@ -10,7 +10,7 @@ export default function ProcessSection() {
       description: "Gratis 30-minuten gesprek om je idee, doelen en technische vereisten te bespreken.",
       duration: "30 minuten",
       details: ["Projectscope bepalen", "Technische analyse", "Tijdlijn vaststellen"],
-      color: "from-blue-600 to-blue-700"
+      color: "from-trust-blue to-trust-blue/80"
     },
     {
       step: 2,
@@ -19,7 +19,7 @@ export default function ProcessSection() {
       description: "Uitgewerkt plan met wireframes, technische architectuur en project roadmap.",
       duration: "1-2 dagen",
       details: ["UI/UX wireframes", "Database ontwerp", "API specificaties"],
-      color: "from-purple-600 to-purple-700"
+      color: "from-sage-green to-sage-green/80"
     },
     {
       step: 3,
@@ -28,7 +28,7 @@ export default function ProcessSection() {
       description: "Professionele ontwikkeling met dagelijkse updates en tussentijdse reviews.",
       duration: "3-7 dagen",
       details: ["Frontend & Backend", "Testing & QA", "Performance optimalisatie"],
-      color: "from-green-600 to-green-700"
+      color: "from-vibe-green to-vibe-green/80"
     },
     {
       step: 4,
@@ -37,7 +37,7 @@ export default function ProcessSection() {
       description: "Live deployment met uitgebreide documentatie en training voor jouw team.",
       duration: "1 dag",
       details: ["Production deployment", "Documentatie", "30 dagen support"],
-      color: "from-orange-600 to-orange-700"
+      color: "from-conversion-orange to-conversion-orange/80"
     }
   ];
 

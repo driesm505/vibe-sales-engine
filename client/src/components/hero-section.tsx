@@ -120,8 +120,8 @@ export default function HeroSection() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-2xl font-bold text-white">$ ./deploy-mvp --live</h3>
                     <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-sm text-green-400 font-mono">STATUS: DEPLOYED</span>
+                      <div className="w-3 h-3 bg-vibe-green rounded-full animate-pulse"></div>
+                      <span className="text-sm text-vibe-green font-mono">STATUS: DEPLOYED</span>
                     </div>
                   </div>
                   <div className="grid grid-cols-3 gap-4 mb-4">

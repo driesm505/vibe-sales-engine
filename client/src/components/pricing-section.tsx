@@ -17,8 +17,8 @@ export default function PricingSection() {
       price: "€1,500",
       duration: "3-5 days",
       icon: <Terminal className="text-white" size={24} />,
-      bgColor: "from-orange-600 to-red-600",
-      borderColor: "border-orange-500",
+      bgColor: "from-conversion-orange to-conversion-orange/80",
+      borderColor: "border-conversion-orange",
       description: "Rapid prototype with core functionality validation",
       techStack: ["React", "Node.js", "SQLite", "Tailwind"],
       codeSnippet: "npx create-mvp --template=prototype",
@@ -39,8 +39,8 @@ export default function PricingSection() {
       price: "€2,500",
       duration: "1-2 weeks",
       icon: <Code className="text-white" size={24} />,
-      bgColor: "from-blue-600 to-cyan-600",
-      borderColor: "border-blue-500",
+      bgColor: "from-vibe-green to-vibe-green/80",
+      borderColor: "border-vibe-green",
       description: "Production-ready MVP with enterprise architecture",
       techStack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
       codeSnippet: "docker-compose up --scale web=3",
@@ -61,8 +61,8 @@ export default function PricingSection() {
       price: "€5,000",
       duration: "7-10 days",
       icon: <Database className="text-white" size={24} />,
-      bgColor: "from-purple-600 to-indigo-600",
-      borderColor: "border-purple-500",
+      bgColor: "from-trust-blue to-trust-blue/80",
+      borderColor: "border-trust-blue",
       description: "Enterprise-grade platform ready for millions of users",
       techStack: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Kubernetes"],
       codeSnippet: "kubectl apply -f k8s/ && helm upgrade app",
@@ -87,7 +87,7 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">{'$'}</span> Transparent Pricing
+            <span className="text-vibe-green">{'$'}</span> Transparent Pricing
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Enterprise-grade development packages with clear deliverables. No hidden costs, just production-ready code.
