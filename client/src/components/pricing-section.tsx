@@ -92,7 +92,7 @@ export default function PricingSection() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Enterprise-grade development packages with clear deliverables. No hidden costs, just production-ready code.
           </p>
-          <div className="mt-4 text-sm font-mono text-green-400">
+          <div className="mt-4 text-sm font-mono text-vibe-green">
             {'>'} npm install @vibe/mvp-builder --save
           </div>
         </div>

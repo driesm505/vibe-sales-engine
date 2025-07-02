@@ -102,17 +102,17 @@ This is a modern marketing website for Vibe Coding Agency, built as a full-stack
 - Static file serving capability
 
 ## Recent Changes
-- June 30, 2025: Professional color scheme implementation and brand consistency:
-  - **Strategic Color Palette Implementation**: Applied user-specified professional color scheme across entire website
-  - **#3CDE82 (Vibe Green)**: Now prominently featured as primary brand color in navigation, hero section, and CTAs
-  - **#00B8B8 (Trust Blue)**: Integrated for secondary actions and trust-building elements
-  - **#7BAB99 (Sage Green)**: Applied for calming accents and tertiary UI elements
-  - **#FF5C0A (Conversion Orange)**: Used strategically for high-conversion elements like contact forms and floating CTAs
-  - **Professional Brand Consistency**: Updated all components to use new color variables for maintainable design system
-  - **Enhanced Visual Hierarchy**: Color-coded feature indicators and service cards for better information architecture
-  - **Maintained Professional Styling**: Kept clean, business-focused aesthetic while implementing vibrant color scheme
-  - **Component Color Coordination**: Services section, hero features, and Why Us cards now use coordinated color rotation
-  - **Conversion-Optimized Elements**: Orange color strategically placed on primary conversion points
+- June 30, 2025: Landing page optimization and UI consistency improvements:
+  - **Hero Section Refinement**: Removed "Bekijk Demo" button and updated "Deel je idee" button with professional glass-morphism styling
+  - **Interactive Demo Video**: Added auto-playing mockup video in the hero section laptop mockup for engaging user experience
+  - **Brand Color Consistency**: Standardized all green colors to use vibe-green (#3CDE82) across navigation, buttons, and accents
+  - **Service Cards Enhancement**: Updated all service card buttons to use coordinated brand color palette (vibe-green, trust-blue, sage-green)
+  - **Process Section Colors**: Aligned process step colors with brand palette for visual consistency
+  - **Pricing Section Redesign**: Updated pricing card gradients to use brand colors (conversion-orange, vibe-green, trust-blue)
+  - **Professional Button Styling**: Implemented consistent button styling throughout with proper hover effects and color coordination
+  - **Visual Hierarchy Improvement**: Ensured vibe-green appears regularly throughout the website for brand recognition
+  - **Code Snippet Styling**: Updated all terminal/code elements to use consistent vibe-green highlighting
+  - **Icon Color Coordination**: Applied brand color rotation to feature icons and indicators
 
 ## Changelog
 - June 28, 2025: Initial setup and full website development
