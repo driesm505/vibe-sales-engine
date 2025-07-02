@@ -57,9 +57,9 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="group bg-white/10 hover:bg-vibe-green/20 text-white border border-white/20 hover:border-vibe-green hover:shadow-lg hover:shadow-vibe-green/25 px-8 py-4 rounded-lg font-semibold text-base transition-all duration-300 backdrop-blur-sm hover:scale-105 transform"
+                className="group bg-vibe-green hover:bg-vibe-green/90 text-black border border-vibe-green hover:border-vibe-green/70 hover:shadow-lg hover:shadow-vibe-green/40 px-8 py-4 rounded-lg font-semibold text-base transition-all duration-300 backdrop-blur-sm hover:scale-105 transform"
               >
-                <span className="group-hover:text-vibe-green transition-colors duration-300">{t.hero.shareIdea}</span>
+                <span className="group-hover:text-slate-900 transition-colors duration-300">{t.hero.shareIdea}</span>
                 <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </div>
