@@ -49,7 +49,7 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">{'>'}</span> Ons Ontwikkelproces
+            <span className="text-vibe-green">{'>'}</span> Ons Ontwikkelproces
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto font-mono">
             {'// '}Van idee tot live product in 7 dagen — transparant, professioneel en resultaatgericht
@@ -70,26 +70,26 @@ export default function ProcessSection() {
                     <div className={`w-20 h-20 mx-auto bg-gradient-to-r ${step.color} rounded-full border-4 border-slate-900 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <step.icon className="text-white" size={28} />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-400 text-black rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-vibe-green text-black rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
                       {step.step}
                     </div>
                   </div>
                   
                   {/* Card */}
-                  <Card className="bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm hover:border-green-400/50 transition-all duration-300">
+                  <Card className="bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm hover:border-vibe-green/50 transition-all duration-300 hover:shadow-lg hover:shadow-vibe-green/10">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-gray-300 text-sm mb-4 leading-relaxed">{step.description}</p>
                       
                       <div className="flex items-center justify-center mb-4">
-                        <Clock className="text-green-400 mr-2" size={16} />
-                        <span className="text-green-400 font-mono text-sm">{step.duration}</span>
+                        <Clock className="text-vibe-green mr-2" size={16} />
+                        <span className="text-vibe-green font-mono text-sm">{step.duration}</span>
                       </div>
                       
                       <div className="space-y-2">
                         {step.details.map((detail, detailIndex) => (
                           <div key={detailIndex} className="flex items-center text-xs text-gray-400">
-                            <div className="w-1 h-1 bg-green-400 rounded-full mr-2"></div>
+                            <div className="w-1 h-1 bg-vibe-green rounded-full mr-2"></div>
                             {detail}
                           </div>
                         ))}
@@ -110,7 +110,7 @@ export default function ProcessSection() {
               <div className="flex-shrink-0">
                 <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center relative`}>
                   <step.icon className="text-white" size={24} />
-                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-400 text-black rounded-full flex items-center justify-center text-xs font-bold">
+                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-vibe-green text-black rounded-full flex items-center justify-center text-xs font-bold shadow-lg">
                     {step.step}
                   </div>
                 </div>
@@ -124,8 +124,8 @@ export default function ProcessSection() {
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">{step.description}</p>
                     
                     <div className="flex items-center mb-4">
-                      <Clock className="text-green-400 mr-2" size={16} />
-                      <span className="text-green-400 font-mono text-sm">{step.duration}</span>
+                      <Clock className="text-vibe-green mr-2" size={16} />
+                      <span className="text-vibe-green font-mono text-sm">{step.duration}</span>
                     </div>
                     
                     <div className="space-y-2">
