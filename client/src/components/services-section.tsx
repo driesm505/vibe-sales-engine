@@ -205,7 +205,7 @@ export default function ServicesSection() {
                   
                   {/* Code snippet */}
                   <div className="bg-black/50 rounded-lg p-4 mb-6 border border-slate-600">
-                    <div className="text-xs text-green-400 mb-1 font-mono">{'>'}</div>
+                    <div className="text-xs text-vibe-green mb-1 font-mono">{'>'}</div>
                     <div className="text-xs text-gray-300 font-mono">{service.codeSnippet}</div>
                   </div>
                   
@@ -213,7 +213,7 @@ export default function ServicesSection() {
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start text-gray-300">
-                        <CheckCircle className="mr-3 text-green-400 flex-shrink-0 mt-0.5" size={16} />
+                        <CheckCircle className="mr-3 text-vibe-green flex-shrink-0 mt-0.5" size={16} />
                         <span className="text-sm">{feature}</span>
                       </li>
                     ))}
@@ -238,14 +238,14 @@ export default function ServicesSection() {
           <div className="text-center">
             <div className="bg-slate-800/50 rounded-2xl p-8 max-w-2xl mx-auto border border-slate-700 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-white mb-4">
-                <span className="text-green-400">{'>'}</span> Ready to Build?
+                <span className="text-vibe-green">{'>'}</span> Ready to Build?
               </h3>
               <p className="text-gray-300 mb-6">
                 Let's turn your idea into a production-ready application with modern tech stack.
               </p>
               <Button 
                 onClick={scrollToContact}
-                className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg"
+                className="bg-vibe-green hover:bg-vibe-green/90 text-black px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg"
               >
                 <GitBranch className="mr-2" size={16} />
                 Initialize Project
