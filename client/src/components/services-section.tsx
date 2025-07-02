@@ -133,8 +133,8 @@ export default function ServicesSection() {
         "Security audit & penetration testing",
         "DevOps setup with CI/CD pipelines"
       ],
-      bgColor: "bg-purple-700",
-      buttonColor: "bg-purple-700 hover:bg-purple-600",
+      bgColor: "bg-slate-800",
+      buttonColor: "bg-conversion-orange hover:bg-conversion-orange/90 text-white",
       techStack: ["Architecture", "DevOps", "Security", "Performance"],
       completedCount: consultingCount,
       codeSnippet: "$ docker-compose up -d --scale app=3"

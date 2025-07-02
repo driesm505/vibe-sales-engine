@@ -103,8 +103,8 @@ export default function StatsSection() {
       number: `${(ratingCount / 10).toFixed(1)}/5`,
       label: t.stats.rating,
       description: t.stats.ratingDesc,
-      bgColor: "bg-purple-600",
-      gradient: "from-purple-500 to-indigo-600"
+      bgColor: "bg-sage-green",
+      gradient: "from-sage-green to-trust-blue"
     }
   ];
 

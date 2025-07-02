@@ -10,31 +10,31 @@ export default function WhyUsSection() {
       icon: Clock,
       title: t.whyUs.fastDelivery.title,
       description: t.whyUs.fastDelivery.description,
-      gradient: "from-green-600 to-emerald-600"
+      gradient: "from-vibe-green to-sage-green"
     },
     {
       icon: Code2,
       title: t.whyUs.professionalQuality.title,
       description: t.whyUs.professionalQuality.description,
-      gradient: "from-blue-600 to-cyan-600"
+      gradient: "from-trust-blue to-vibe-green"
     },
     {
       icon: Users,
       title: t.whyUs.personalApproach.title,
       description: t.whyUs.personalApproach.description,
-      gradient: "from-purple-600 to-indigo-600"
+      gradient: "from-sage-green to-trust-blue"
     },
     {
       icon: Shield,
       title: t.whyUs.reliablePartner.title,
       description: t.whyUs.reliablePartner.description,
-      gradient: "from-orange-600 to-red-600"
+      gradient: "from-conversion-orange to-vibe-green"
     },
     {
       icon: Zap,
       title: t.whyUs.aiAccelerated.title,
       description: t.whyUs.aiAccelerated.description,
-      gradient: "from-yellow-600 to-amber-600"
+      gradient: "from-vibe-green to-trust-blue"
     },
     {
       icon: CheckCircle,
