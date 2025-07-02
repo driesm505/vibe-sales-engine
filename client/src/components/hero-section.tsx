@@ -57,9 +57,10 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-vibe-green/50 px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 backdrop-blur-sm"
+                className="group bg-white/10 hover:bg-vibe-green/20 text-white border border-white/20 hover:border-vibe-green hover:shadow-lg hover:shadow-vibe-green/25 px-8 py-4 rounded-lg font-semibold text-base transition-all duration-300 backdrop-blur-sm hover:scale-105 transform"
               >
-                {t.hero.shareIdea}
+                <span className="group-hover:text-vibe-green transition-colors duration-300">{t.hero.shareIdea}</span>
+                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-400 text-sm">
@@ -76,7 +77,7 @@ export default function HeroSection() {
                 <span className="font-medium">{t.hero.features.ai}</span>
               </div>
             </div>
-            <div className="mt-6 text-xs font-mono text-green-400">
+            <div className="mt-6 text-xs font-mono text-vibe-green">
               {typedText}<span className="animate-pulse">|</span>
             </div>
           </div>
@@ -103,16 +104,30 @@ export default function HeroSection() {
                     className="w-full h-full object-cover"
                     poster="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
                   >
-                    <source src="https://player.vimeo.com/external/259160015.sd.mp4?s=c12f0a6b8e7c0e4e7f0f5a5c9b3a1f1e1f0f5a5c&profile_id=164" type="video/mp4" />
-                    <div className="absolute inset-0 bg-gradient-to-br from-vibe-green/20 via-trust-blue/20 to-sage-green/20 flex items-center justify-center">
+                    <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+                    
+                    {/* Fallback content when video doesn't load */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-vibe-green/30 via-trust-blue/30 to-sage-green/30 flex items-center justify-center">
                       <div className="text-center text-white">
-                        <div className="text-2xl font-bold mb-2">MVP Demo</div>
-                        <div className="text-sm opacity-75">Building your ideas into reality</div>
+                        <div className="text-3xl font-bold mb-3 animate-pulse">MVP Demo</div>
+                        <div className="text-lg opacity-90 mb-4">Building your ideas into reality</div>
+                        <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                          <div className="text-sm font-mono text-vibe-green">React + TypeScript + Node.js</div>
+                        </div>
                       </div>
                     </div>
                   </video>
-                  <div className="absolute top-4 right-4 bg-vibe-green/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                    <span className="text-xs font-mono text-vibe-green">LIVE DEMO</span>
+                  
+                  {/* Live Signal - Left Corner */}
+                  <div className="absolute top-4 left-4 flex items-center bg-red-600/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
+                    <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                    <span className="text-xs font-bold text-white">LIVE</span>
+                  </div>
+                  
+                  {/* Demo Label - Right Corner */}
+                  <div className="absolute top-4 right-4 bg-vibe-green/20 backdrop-blur-sm px-3 py-1 rounded-full border border-vibe-green/30">
+                    <span className="text-xs font-mono text-vibe-green">DEMO</span>
                   </div>
                 </div>
                 
@@ -139,8 +154,14 @@ export default function HeroSection() {
                     </div>
                   </div>
                   <div className="flex items-center justify-between text-sm text-gray-400 font-mono">
-                    <span>React + TypeScript + Node.js</span>
-                    <span>Vercel Deploy ✓</span>
+                    <span className="flex items-center">
+                      <div className="w-2 h-2 bg-vibe-green rounded-full mr-2 animate-pulse"></div>
+                      React + TypeScript + Node.js
+                    </span>
+                    <span className="flex items-center text-vibe-green">
+                      <span>Vercel Deploy</span>
+                      <div className="w-1 h-1 bg-vibe-green rounded-full ml-2 animate-ping"></div>
+                    </span>
                   </div>
                 </div>
               </div>

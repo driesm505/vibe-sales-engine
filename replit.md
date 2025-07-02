@@ -102,6 +102,15 @@ This is a modern marketing website for Vibe Coding Agency, built as a full-stack
 - Static file serving capability
 
 ## Recent Changes
+- July 2, 2025: Enhanced hero section interactions and live demo experience:
+  - **"Deel Je Idee" Button Enhancement**: Added sophisticated hover effects with scale transform, green glow shadow, color transitions, and animated chevron icon
+  - **Live Video Signal**: Added prominent "LIVE" indicator in top-left corner with pulsing white dot and red background for authentic streaming feel
+  - **Demo Video Improvements**: Enhanced video mockup with multiple fallback sources and improved overlay content
+  - **Interactive Status Indicators**: Added pulsing and ping animations to deployment status elements for dynamic feel
+  - **Enhanced Visual Feedback**: Button hover now includes vibe-green text color transition and 3D scale effect
+  - **Consistent Brand Colors**: Updated typing animation and status indicators to use vibe-green throughout
+  - **Professional Polish**: Improved button styling with group states and smooth transitions for premium user experience
+
 - July 2, 2025: Enhanced demo and process section styling with additional green accents:
   - **"Bekijk Demo" Button Enhancement**: Updated VideoModal trigger button with vibe-green styling, shadow effects, and improved hover states
   - **"Ons Ontwikkelproces" Section Improvements**: Added extensive vibe-green accents throughout process section
