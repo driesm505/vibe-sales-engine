@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,7 +9,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { useLanguage } from "@/lib/i18n";
 import { NotebookPen, Calendar, Clock, Shield, Handshake } from "lucide-react";
 
@@ -44,31 +42,22 @@ export default function ContactSection() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      return apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    // Simulate API call for demo purposes
+    setTimeout(() => {
+      console.log("Contact form submission:", data);
+      
+      // Show success message
       toast({
         title: t.toast.success.title,
         description: t.toast.success.description,
       });
+      
       form.reset();
       setIsSubmitting(false);
-    },
-    onError: (error: any) => {
-      toast({
-        title: t.toast.error.title,
-        description: error.message || t.toast.error.description,
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-    },
-  });
-
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true);
-    contactMutation.mutate(data);
+    }, 1000);
   };
 
   return (
