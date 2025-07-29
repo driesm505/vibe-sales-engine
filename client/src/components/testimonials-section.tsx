@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Github, Terminal, Code } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export default function TestimonialsSection() {
+  const { t } = useLanguage();
   const testimonials = [
     {
       name: "Sarah.tech",
@@ -9,7 +11,7 @@ export default function TestimonialsSection() {
       avatar: "ST",
       rating: 5,
       techStack: "Next.js + PostgreSQL",
-      deployTime: "5 days",
+      deployTime: "From 5 days",
       quote: "Production-ready MVP with enterprise architecture. Their TypeScript setup saved us months of refactoring later.",
       metrics: "50K+ users, 99.9% uptime"
     },
@@ -29,7 +31,7 @@ export default function TestimonialsSection() {
       avatar: "EB",
       rating: 5,
       techStack: "Full-stack TypeScript",
-      deployTime: "3 days",
+      deployTime: "From 3 days",
       quote: "Lightning-fast development without compromising quality. The automated testing suite gave us confidence from day one.",
       metrics: "95+ Lighthouse score"
     }
@@ -49,9 +51,9 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">{'>'}</span> Developer Reviews
+            <span className="text-green-400">{'>'}</span> {t.testimonials.title}
           </h2>
-          <p className="text-xl text-gray-300">Real feedback from engineering teams and technical founders</p>
+          <p className="text-xl text-gray-300">{t.testimonials.subtitle}</p>
           <div className="mt-4 text-sm font-mono text-green-400">
             {'>'} git log --oneline --reviews
           </div>
@@ -110,7 +112,7 @@ export default function TestimonialsSection() {
 
         {/* Tech Stack Badges */}
         <div className="mt-16 text-center">
-          <p className="text-gray-300 mb-8 font-mono">// Powered by modern tech stack</p>
+          <p className="text-gray-300 mb-8 font-mono">// {t.testimonials.trusted}</p>
           <div className="flex justify-center items-center gap-6 flex-wrap">
             {techBadges.map((badge, index) => (
               <div key={index} className="bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-2 flex items-center space-x-2 hover:bg-slate-600/50 transition-colors">

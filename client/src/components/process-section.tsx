@@ -69,30 +69,37 @@ export default function ProcessSection() {
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center">
                   {/* Step Number & Icon */}
-                  <div className="relative mb-6">
-                    <div className={`w-20 h-20 mx-auto bg-gradient-to-r ${step.color} rounded-full border-4 border-slate-900 shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <step.icon className="text-white" size={28} />
+                  <div className="relative mb-6 group">
+                    <div className={`w-20 h-20 mx-auto bg-gradient-to-r ${step.color} rounded-full border-4 border-slate-900 shadow-lg flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-vibe-green/10`}>
+                      <step.icon className="text-white transition-all duration-300" size={28} />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-vibe-green text-black rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
-                      {step.step}
-                    </div>
+                    {/* Arrow to next step */}
+                    {index < processSteps.length - 1 && (
+                      <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-20">
+                        <div className="w-10 h-10 bg-vibe-green border-2 border-vibe-green rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-xl hover:shadow-vibe-green/30">
+                          <svg className="w-5 h-5 text-black font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   {/* Card */}
-                  <Card className="bg-slate-800/50 border border-slate-700/50 rounded-xl backdrop-blur-sm hover:border-vibe-green/50 transition-all duration-300 hover:shadow-lg hover:shadow-vibe-green/10">
+                  <Card className="bg-slate-800/50 border border-slate-700/50 rounded-xl backdrop-blur-sm hover:border-vibe-green/50 transition-all duration-300 hover:shadow-lg hover:shadow-vibe-green/10 hover:-translate-y-1 group-hover:bg-slate-800/60 cursor-pointer group">
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-white mb-3">{step.title}</h3>
-                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">{step.description}</p>
+                      <h3 className="text-lg font-semibold text-white mb-3 transition-colors duration-300 group-hover:text-vibe-green">{step.title}</h3>
+                      <p className="text-gray-400 text-sm mb-4 leading-relaxed transition-colors duration-300 group-hover:text-gray-300">{step.description}</p>
                       
-                      <div className="flex items-center justify-center mb-3">
-                        <Clock className="text-vibe-green mr-2" size={14} />
-                        <span className="text-vibe-green text-sm">{step.duration}</span>
+                      <div className="flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300">
+                        <Clock className="text-vibe-green mr-2 group-hover:animate-pulse" size={14} />
+                        <span className="text-vibe-green text-sm font-medium">{step.duration}</span>
                       </div>
                       
                       <div className="space-y-2">
                         {step.details.map((detail, detailIndex) => (
-                          <div key={detailIndex} className="flex items-center text-xs text-gray-400">
-                            <div className="w-1 h-1 bg-vibe-green rounded-full mr-2"></div>
+                          <div key={detailIndex} className="flex items-center text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300 hover:translate-x-1 hover:text-vibe-green">
+                            <div className="w-1 h-1 bg-vibe-green rounded-full mr-2 group-hover:scale-150 transition-transform duration-300"></div>
                             {detail}
                           </div>
                         ))}
@@ -110,18 +117,25 @@ export default function ProcessSection() {
           {processSteps.map((step, index) => (
             <div key={index} className="flex items-start space-x-4">
               {/* Step Icon */}
-              <div className="flex-shrink-0">
-                <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center relative`}>
-                  <step.icon className="text-white" size={24} />
-                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-vibe-green text-black rounded-full flex items-center justify-center text-xs font-bold shadow-lg">
-                    {step.step}
-                  </div>
+              <div className="flex-shrink-0 group">
+                <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center relative transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-vibe-green/10`}>
+                  <step.icon className="text-white transition-all duration-300" size={24} />
                 </div>
+                {/* Arrow to next step */}
+                {index < processSteps.length - 1 && (
+                  <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-20">
+                    <div className="w-8 h-8 bg-vibe-green border-2 border-vibe-green rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-xl hover:shadow-vibe-green/30">
+                      <svg className="w-4 h-4 text-black font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
               </div>
               
               {/* Content */}
               <div className="flex-1">
-                <Card className="bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm">
+                <Card className="bg-slate-800/70 border border-slate-700 rounded-2xl backdrop-blur-sm hover:border-vibe-green/50 transition-all duration-300 hover:shadow-lg hover:shadow-vibe-green/10 hover:-translate-y-1 cursor-pointer group">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">{step.description}</p>

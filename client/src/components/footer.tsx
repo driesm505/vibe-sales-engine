@@ -1,6 +1,8 @@
 import { Code, Github, Terminal, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -20,7 +22,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md text-sm leading-relaxed">
-              Enterprise-grade development solutions for innovative businesses. From MVP to scale, we deliver production-ready applications that drive growth.
+              {t.footer.description}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-colors duration-300 border border-slate-700">
@@ -59,10 +61,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">© {currentYear} Vibe Coding Agency. All rights reserved.</p>
+          <p className="text-gray-400">© {currentYear} Vibe Coding Agency. {t.footer.rights}</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-vibe-green transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-vibe-green transition-colors">Terms of Service</a>
+            <a href="#" className="text-gray-400 hover:text-vibe-green transition-colors">{t.footer.privacy}</a>
+            <a href="#" className="text-gray-400 hover:text-vibe-green transition-colors">{t.footer.terms}</a>
           </div>
         </div>
       </div>

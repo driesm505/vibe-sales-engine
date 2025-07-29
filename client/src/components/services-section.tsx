@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Terminal, Code, Database, Cloud, CheckCircle, GitBranch, Monitor, Zap } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import { useLanguage } from "@/lib/i18n";
 
 // Custom hooks for animations
 function useCountAnimation(targetValue: number, isVisible: boolean) {
@@ -55,6 +56,7 @@ function useIntersectionObserver() {
 }
 
 export default function ServicesSection() {
+  const { t } = useLanguage();
   const { ref, isVisible } = useIntersectionObserver();
   
   const scrollToContact = () => {
@@ -73,15 +75,10 @@ export default function ServicesSection() {
   const services = [
     {
       icon: <Terminal className="text-white text-xl" />,
-      title: "MVP Development",
-      price: "From €5,000",
-      description: "Full-stack MVP with modern architecture. React frontend, Node.js backend, PostgreSQL database, and cloud deployment.",
-      features: [
-        "React + TypeScript frontend development",
-        "Node.js + Express.js backend API", 
-        "PostgreSQL database with Drizzle ORM",
-        "Docker containerization & cloud deployment"
-      ],
+      title: t.services.mvp.title,
+      price: t.services.mvp.price,
+      description: t.services.mvp.description,
+      features: t.services.mvp.features,
       bgColor: "bg-slate-800",
       buttonColor: "bg-vibe-green hover:bg-vibe-green/90 text-black",
       techStack: ["React", "Node.js", "PostgreSQL", "Docker"],
@@ -90,15 +87,10 @@ export default function ServicesSection() {
     },
     {
       icon: <Code className="text-white text-xl" />,
-      title: "Web Applications",
-      price: "From €2,500", 
-      description: "Custom web applications with modern tech stack. SaaS platforms, admin dashboards, and complex business logic.",
-      features: [
-        "Next.js or React with server-side rendering",
-        "RESTful APIs with authentication & authorization", 
-        "Real-time features with WebSocket integration",
-        "Performance optimization & SEO implementation"
-      ],
+      title: t.services.web.title,
+      price: t.services.web.price,
+      description: t.services.web.description,
+      features: t.services.web.features,
       bgColor: "bg-slate-800",
       buttonColor: "bg-trust-blue hover:bg-trust-blue/90 text-white",
       techStack: ["Next.js", "GraphQL", "Redis", "AWS"],
@@ -107,15 +99,10 @@ export default function ServicesSection() {
     },
     {
       icon: <Monitor className="text-white text-xl" />,
-      title: "Landing Pages",
-      price: "From €1,500",
-      description: "High-converting landing pages with A/B testing, analytics, and conversion optimization built-in.",
-      features: [
-        "Conversion-optimized React components",
-        "Google Analytics & Facebook Pixel integration",
-        "A/B testing framework implementation", 
-        "Lighthouse performance score 90+"
-      ],
+      title: t.services.landing.title,
+      price: t.services.landing.price,
+      description: t.services.landing.description,
+      features: t.services.landing.features,
       bgColor: "bg-slate-800",
       buttonColor: "bg-sage-green hover:bg-sage-green/90 text-white",
       techStack: ["React", "Vercel", "Analytics", "Testing"],
@@ -124,15 +111,10 @@ export default function ServicesSection() {
     },
     {
       icon: <Database className="text-white text-xl" />,
-      title: "Technical Consulting",
-      price: "From €150/hour",
-      description: "Expert technical guidance for architecture, performance optimization, and best practices implementation.",
-      features: [
-        "System architecture design & review",
-        "Database optimization & query performance",
-        "Security audit & penetration testing",
-        "DevOps setup with CI/CD pipelines"
-      ],
+      title: t.services.consulting.title,
+      price: t.services.consulting.price,
+      description: t.services.consulting.description,
+      features: t.services.consulting.features,
       bgColor: "bg-slate-800",
       buttonColor: "bg-conversion-orange hover:bg-conversion-orange/90 text-white",
       techStack: ["Architecture", "DevOps", "Security", "Performance"],
@@ -161,10 +143,10 @@ export default function ServicesSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Services
+              {t.services.whatWeBuild}
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Enterprise-grade development solutions designed for growing businesses and innovative startups.
+              {t.services.whatWeBuildSubtitle}
             </p>
             
             
@@ -224,7 +206,7 @@ export default function ServicesSection() {
                     className={`w-full ${service.buttonColor} text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg`}
                   >
                     <Terminal className="mr-2" size={16} />
-                    Start Project
+                    {t.services.talkIdea}
                   </Button>
                   
                   {/* Glow effect */}
@@ -238,17 +220,17 @@ export default function ServicesSection() {
           <div className="text-center">
             <div className="bg-slate-800/50 rounded-2xl p-8 max-w-2xl mx-auto border border-slate-700 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-white mb-4">
-                <span className="text-vibe-green">{'>'}</span> Ready to Build?
+                <span className="text-vibe-green">{'>'}</span> {t.services.talkIdea}
               </h3>
               <p className="text-gray-300 mb-6">
-                Let's turn your idea into a production-ready application with modern tech stack.
+                {t.services.valueSubtitle}
               </p>
               <Button 
                 onClick={scrollToContact}
                 className="bg-vibe-green hover:bg-vibe-green/90 text-black px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg"
               >
                 <GitBranch className="mr-2" size={16} />
-                Initialize Project
+                {t.services.talkIdea}
               </Button>
             </div>
           </div>
@@ -260,10 +242,10 @@ export default function ServicesSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-              Why Choose Our Tech Approach?
+              {t.services.techApproach.title}
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Modern architecture, proven frameworks, and battle-tested deployment strategies.
+              {t.services.techApproach.subtitle}
             </p>
           </div>
 
@@ -272,24 +254,24 @@ export default function ServicesSection() {
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-vibe-green to-sage-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold font-poppins text-white mb-4">Fast Development</h3>
-              <p className="text-gray-300 leading-relaxed">AI-enhanced development process with modern frameworks for rapid prototyping and deployment.</p>
+              <h3 className="text-2xl font-bold font-poppins text-white mb-4">{t.services.techApproach.fastDevelopment.title}</h3>
+              <p className="text-gray-300 leading-relaxed">{t.services.techApproach.fastDevelopment.description}</p>
             </div>
 
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-trust-blue to-vibe-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold font-poppins text-white mb-4">Production Ready</h3>
-              <p className="text-gray-300 leading-relaxed">Enterprise-grade code with security, performance, and scalability built-in from day one.</p>
+              <h3 className="text-2xl font-bold font-poppins text-white mb-4">{t.services.techApproach.productionReady.title}</h3>
+              <p className="text-gray-300 leading-relaxed">{t.services.techApproach.productionReady.description}</p>
             </div>
 
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-conversion-orange to-sage-green rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Cloud className="text-white text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold font-poppins text-white mb-4">Cloud Native</h3>
-              <p className="text-gray-300 leading-relaxed">Built for the cloud with containerization, auto-scaling, and zero-downtime deployments.</p>
+              <h3 className="text-2xl font-bold font-poppins text-white mb-4">{t.services.techApproach.cloudNative.title}</h3>
+              <p className="text-gray-300 leading-relaxed">{t.services.techApproach.cloudNative.description}</p>
             </div>
           </div>
         </div>

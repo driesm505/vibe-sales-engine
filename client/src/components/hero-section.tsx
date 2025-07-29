@@ -142,7 +142,7 @@ export default function HeroSection() {
                   <div className="grid grid-cols-3 gap-4 mb-4">
                     <div className="bg-slate-800 p-3 rounded-lg text-center hover:bg-slate-700 transition-colors border border-slate-600">
                       <div className="text-2xl font-bold text-vibe-green">7</div>
-                      <div className="text-xs text-gray-400 font-mono">days_to_launch</div>
+                      <div className="text-xs text-gray-400 font-mono">from_days_to_launch</div>
                     </div>
                     <div className="bg-slate-800 p-3 rounded-lg text-center hover:bg-slate-700 transition-colors border border-slate-600">
                       <div className="text-2xl font-bold text-trust-blue">100%</div>

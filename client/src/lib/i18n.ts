@@ -4,6 +4,11 @@ export type Language = 'en' | 'nl';
 
 export const translations = {
   en: {
+    // Common
+    common: {
+      from: 'From',
+      days: 'days',
+    },
     // Navigation
     nav: {
       services: 'Services',
@@ -19,11 +24,11 @@ export const translations = {
       title: 'From Idea to',
       titleHighlight: 'App',
       titleEnd: 'in Days',
-      subtitle: 'We build MVP\'s for entrepreneurs — powered by AI, built with best practices, and ready to scale.',
+      subtitle: 'We build professional applications for entrepreneurs — powered by AI, built with industry best practices, and ready to scale.',
       shareIdea: 'Share Your Idea',
       watchDemo: 'Watch Demo',
       features: {
-        delivery: '7-day delivery',
+        delivery: 'From 7-day delivery',
         production: 'Production ready',
         ai: 'AI-powered',
       },
@@ -31,13 +36,13 @@ export const translations = {
     // Stats Section
     stats: {
       title: 'Proven Results',
-      subtitle: 'Numbers that speak louder than words — see why startups choose us for their MVP development.',
+      subtitle: 'Numbers that speak louder than words — see why startups choose us for their application development.',
       clients: 'Happy Clients',
       clientsDesc: 'Entrepreneurs who trusted us with their vision',
       average: 'Day Average',
-      averageDesc: 'From concept to working MVP',
+      averageDesc: 'From concept to working application',
       funding: 'Funding Raised',
-      fundingDesc: 'By our clients using our MVPs',
+      fundingDesc: 'By our clients using our applications',
       rating: 'Client Rating',
       ratingDesc: 'Average satisfaction score',
       delivery: 'On-time Delivery',
@@ -50,7 +55,7 @@ export const translations = {
       valueSubtitle: 'You bring the idea — we bring the technical power. Whether you\'re validating a concept, pitching investors, or launching to your first users.',
       validate: {
         title: 'Validate Your Concept',
-        description: 'Test your ideas quickly with a professional MVP that lets you gather real user feedback and iterate fast.',
+        description: 'Test your ideas quickly with a professional application that lets you gather real user feedback and iterate fast.',
       },
       impress: {
         title: 'Impress Investors',
@@ -62,9 +67,9 @@ export const translations = {
       },
       talkIdea: 'Let\'s Talk About Your Idea',
       whatWeBuild: 'What We Build',
-      whatWeBuildSubtitle: 'Choose the perfect solution for your project — from quick MVP validation to full-scale platform development.',
+      whatWeBuildSubtitle: 'Choose the perfect solution for your project — from quick concept validation to full-scale platform development.',
       mvp: {
-        title: 'MVP Development',
+        title: 'Application Development',
         price: 'From €5,000',
         description: 'Your first version — lean, functional and designed for rapid testing. Get to market fast with a product that validates your concept and attracts investors.',
         features: [
@@ -77,11 +82,11 @@ export const translations = {
       web: {
         title: 'Web Development',
         price: 'From €2,500',
-        description: 'Custom web applications built with modern technologies. SaaS platforms, marketplaces, portals — whatever your startup needs to succeed.',
+        description: 'Custom web applications built with modern technologies. Business platforms, marketplaces, portals — whatever your startup needs to succeed.',
         features: [
-          'Custom design & development with modern tech stack',
+          'Custom design & development with modern technologies',
           'Responsive & mobile-friendly optimization',
-          'SEO optimization & performance tuning',
+          'Search engine optimization & performance tuning',
           'Security best practices & deployment'
         ],
       },
@@ -107,18 +112,34 @@ export const translations = {
           'Flexible hourly or project-based pricing'
         ],
       },
+      techApproach: {
+        title: 'Why Choose Our Development Approach?',
+        subtitle: 'Modern architecture, proven frameworks, and battle-tested deployment strategies.',
+        fastDevelopment: {
+          title: 'Fast Development',
+          description: 'AI-enhanced development process with modern technologies for rapid prototyping and deployment.'
+        },
+        productionReady: {
+          title: 'Production Ready',
+          description: 'Enterprise-grade code with security, performance, and scalability built-in from day one.'
+        },
+        cloudNative: {
+          title: 'Cloud Native',
+          description: 'Built for the cloud with containerization, auto-scaling, and zero-downtime deployments.'
+        }
+      }
     },
     // Why Us Section
     whyUs: {
       title: 'Why Choose Vibe Coding?',
-      subtitle: 'We combine speed, quality and transparency for entrepreneurs serious about their MVP',
+      subtitle: 'We combine speed, quality and transparency for entrepreneurs serious about their application',
       fastDelivery: {
         title: 'Fast Delivery',
-        description: 'From idea to working MVP in just 7 days. No months of waiting, but immediate results.',
+        description: 'From idea to working application in just 7 days. No months of waiting, but immediate results.',
       },
       professionalQuality: {
         title: 'Professional Quality',
-        description: 'Enterprise-grade code with TypeScript, testing and documentation. Ready for production and scaling.',
+        description: 'Enterprise-grade code with modern technologies, testing and documentation. Ready for production and scaling.',
       },
       personalApproach: {
         title: 'Personal Approach',
@@ -140,7 +161,7 @@ export const translations = {
     // Process Section
     process: {
       title: 'Our Development Process',
-      subtitle: 'From idea to live product in 7 days — transparent, professional and result-oriented',
+      subtitle: 'From idea to live application in 7 days — transparent, professional and result-oriented',
       step1: {
         title: 'Intake Meeting',
         description: 'Free 30-minute consultation to discuss your idea, goals and technical requirements.',
@@ -150,14 +171,14 @@ export const translations = {
       step2: {
         title: 'Design & Planning',
         description: 'Detailed plan with wireframes, technical architecture and project roadmap.',
-        duration: '1-2 days',
-        details: ['UI/UX wireframes', 'Database design', 'API specifications']
+        duration: 'From 1-2 days',
+        details: ['UI/UX wireframes', 'Database design', 'System specifications']
       },
       step3: {
         title: 'Development',
         description: 'Professional development with daily updates and intermediate reviews.',
-        duration: '3-7 days',
-        details: ['Frontend & Backend', 'Testing & QA', 'Performance optimization']
+        duration: 'From 3-7 days',
+        details: ['Frontend & Backend', 'Testing & Quality Assurance', 'Performance optimization']
       },
       step4: {
         title: 'Launch & Handover',
@@ -174,6 +195,50 @@ export const translations = {
       getStarted: 'Get Started with',
       custom: 'Need something custom? Let\'s discuss your specific requirements.',
       customQuote: 'Request Custom Quote',
+      plans: {
+        mvpPrototype: {
+          name: 'Application Prototype',
+          description: 'Rapid prototype with core functionality validation',
+                      features: [
+              'Interactive prototype with core user flows',
+              'Secure authentication system',
+              'Basic data operations',
+              'Responsive design (mobile-first)',
+              'Search engine optimization & meta tags',
+              'Analytics integration',
+              '3 deployment environments',
+            'Source code documentation'
+          ]
+        },
+        productionMvp: {
+          name: 'Production Application',
+          description: 'Production-ready application with enterprise architecture',
+                      features: [
+              'Full-stack modern application',
+              'Advanced database with optimized queries',
+              'User authentication & authorization',
+              'Admin dashboard with analytics',
+              'Professional API with rate limiting',
+              'Automated testing & quality assurance',
+              'Automated deployment pipeline',
+              'Performance monitoring & tracking'
+            ]
+        },
+        scaleReady: {
+          name: 'Scale-Ready Platform',
+          description: 'Enterprise-grade platform ready for millions of users',
+                      features: [
+              'Microservices architecture',
+              'Multi-tenant database design',
+              'Real-time features & live updates',
+              'Payment processing integration',
+              'Advanced caching & content delivery',
+              'Auto-scaling infrastructure',
+              'Security audit & penetration testing',
+              '30 days dedicated support'
+            ]
+        }
+      }
     },
     // Testimonials
     testimonials: {
@@ -185,10 +250,32 @@ export const translations = {
     faq: {
       title: 'Frequently Asked Questions',
       subtitle: 'Get answers to common questions about our development process',
+      questions: {
+        deployment: {
+          question: "What's your deployment process?",
+          answer: "Full automated deployment pipeline: automated testing, security scanning, deployment to staging/production environments. Zero-downtime deployments with health checks and rollback capabilities. Infrastructure managed with modern tools."
+        },
+        techStack: {
+          question: "Which technologies do you recommend for scalability?",
+          answer: "Modern web technologies with advanced databases for most projects. For enterprise: microservices architecture, advanced caching, message queues, comprehensive monitoring. All containerized with modern orchestration."
+        },
+        database: {
+          question: "How do you handle database changes and rollbacks?",
+          answer: "Schema versioning with modern tools, automated migration scripts, database backups before every deployment. Rollback strategies include blue-green deployments and database transaction logs. Production data is never at risk."
+        },
+        monitoring: {
+          question: "What's included in your monitoring and observability?",
+          answer: "Application performance monitoring, error tracking, log aggregation, uptime monitoring (99.9% SLA), real-time alerts via modern communication tools. Custom dashboards for business metrics."
+        },
+        quality: {
+          question: "How do you ensure code quality and security?",
+          answer: "Automated code reviews, 90%+ test coverage, dependency vulnerability scanning, comprehensive security testing, industry compliance. Every commit goes through quality checks, formatting, and security verification before merge."
+        }
+      }
     },
     // Contact
     contact: {
-      title: 'Ready to Build Your MVP?',
+      title: 'Ready to Build Your Application?',
       subtitle: 'Let\'s discuss how we can bring your ideas to life. Schedule a free consultation and get a custom quote for your project.',
       form: {
         name: 'Full Name',
@@ -214,7 +301,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      description: 'We build MVP\'s for entrepreneurs — powered by AI, built with best practices, and ready to scale. From idea to launch in days, not months.',
+      description: 'We build professional applications for entrepreneurs — powered by AI, built with industry best practices, and ready to scale. From idea to launch in days, not months.',
       services: 'Services',
       company: 'Company',
       about: 'About Us',
@@ -225,22 +312,38 @@ export const translations = {
       terms: 'Terms of Service',
       rights: 'All rights reserved.',
     },
+    // Toast Messages
+    toast: {
+      success: {
+        title: 'Message sent successfully!',
+        description: 'We\'ll get back to you within 24 hours.',
+      },
+      error: {
+        title: 'Error sending message',
+        description: 'Please try again later.',
+      },
+    },
     // Floating CTA
     floating: {
       ready: 'Ready to Start?',
-      mvp7days: 'Get your MVP in 7 days',
+      mvp7days: 'Get your application from 7 days',
       shareIdea: 'Share Your Idea',
       bookCall: 'Book Free Call',
       consultation: 'Free consultation',
       response: '24h response',
       mobile: {
-        ready: 'Ready to build your MVP?',
-        pricing: 'From €2,500 • 7-day delivery',
+        ready: 'Ready to build your application?',
+        pricing: 'From €2,500 • From 7-day delivery',
         getStarted: 'Get Started',
       },
     },
   },
   nl: {
+    // Common
+    common: {
+      from: 'Vanaf',
+      days: 'dagen',
+    },
     // Navigation
     nav: {
       services: 'Diensten',
@@ -256,11 +359,11 @@ export const translations = {
       title: 'Van Idee naar',
       titleHighlight: 'App',
       titleEnd: 'in Dagen',
-      subtitle: 'Wij bouwen MVP\'s voor ondernemers — aangedreven door AI, gebouwd met best practices, en klaar om te schalen.',
+      subtitle: 'Wij bouwen professionele applicaties voor ondernemers — aangedreven door AI, gebouwd met industry best practices, en klaar om te schalen.',
       shareIdea: 'Deel Je Idee',
       watchDemo: 'Bekijk Demo',
       features: {
-        delivery: '7-dagen levering',
+        delivery: 'Vanaf 7-dagen levering',
         production: 'Productie klaar',
         ai: 'AI-gedreven',
       },
@@ -268,13 +371,13 @@ export const translations = {
     // Stats Section
     stats: {
       title: 'Bewezen Resultaten',
-      subtitle: 'Cijfers die luider spreken dan woorden — zie waarom startups voor ons kiezen voor hun MVP ontwikkeling.',
+      subtitle: 'Cijfers die luider spreken dan woorden — zie waarom startups voor ons kiezen voor hun applicatie ontwikkeling.',
       clients: 'Tevreden Klanten',
       clientsDesc: 'Ondernemers die ons vertrouwden met hun visie',
       average: 'Dagen Gemiddeld',
-      averageDesc: 'Van concept tot werkende MVP',
+      averageDesc: 'Van concept tot werkende applicatie',
       funding: 'Financiering Opgehaald',
-      fundingDesc: 'Door onze klanten met onze MVP\'s',
+      fundingDesc: 'Door onze klanten met onze applicaties',
       rating: 'Klant Waardering',
       ratingDesc: 'Gemiddelde tevredenheidsscore',
       delivery: 'Op Tijd Geleverd',
@@ -344,6 +447,22 @@ export const translations = {
           'Flexibele uur- of project-gebaseerde prijzen'
         ],
       },
+      techApproach: {
+        title: 'Waarom Kiezen voor Onze Tech Aanpak?',
+        subtitle: 'Moderne architectuur, bewezen frameworks en geteste deployment strategieën.',
+        fastDevelopment: {
+          title: 'Snelle Ontwikkeling',
+          description: 'AI-verbeterd ontwikkelingsproces met moderne frameworks voor snelle prototyping en deployment.'
+        },
+        productionReady: {
+          title: 'Productie Klaar',
+          description: 'Enterprise-grade code met beveiliging, performance en schaalbaarheid ingebouwd vanaf dag één.'
+        },
+        cloudNative: {
+          title: 'Cloud Native',
+          description: 'Gebouwd voor de cloud met containerisatie, auto-scaling en zero-downtime deployments.'
+        }
+      }
     },
     // Why Us Section
     whyUs: {
@@ -387,13 +506,13 @@ export const translations = {
       step2: {
         title: 'Ontwerp & Planning',
         description: 'Uitgewerkt plan met wireframes, technische architectuur en project roadmap.',
-        duration: '1-2 dagen',
+        duration: 'Vanaf 1-2 dagen',
         details: ['UI/UX wireframes', 'Database ontwerp', 'API specificaties']
       },
       step3: {
         title: 'Ontwikkeling',
         description: 'Professionele ontwikkeling met dagelijkse updates en tussentijdse reviews.',
-        duration: '3-7 dagen',
+        duration: 'Vanaf 3-7 dagen',
         details: ['Frontend & Backend', 'Testing & QA', 'Performance optimalisatie']
       },
       step4: {
@@ -416,6 +535,50 @@ export const translations = {
       getStarted: 'Begin met',
       custom: 'Iets aangepasts nodig? Laten we je specifieke vereisten bespreken.',
       customQuote: 'Vraag Aangepaste Offerte',
+      plans: {
+        mvpPrototype: {
+          name: 'MVP Prototype',
+          description: 'Snelle prototype met kernfunctionaliteit validatie',
+          features: [
+            'Interactieve prototype met kern gebruikersflows',
+            'Authenticatie systeem (OAuth2)',
+            'Basis CRUD operaties',
+            'Responsive design (mobile-first)',
+            'SEO optimalisatie & meta tags',
+            'Analytics integratie (GA4)',
+            '3 deployment omgevingen',
+            'Broncode documentatie'
+          ]
+        },
+        productionMvp: {
+          name: 'Productie MVP',
+          description: 'Productie-klare MVP met enterprise architectuur',
+          features: [
+            'Full-stack TypeScript applicatie',
+            'PostgreSQL met geoptimaliseerde queries',
+            'Gebruikers authenticatie & autorisatie',
+            'Admin dashboard met analytics',
+            'REST/GraphQL API met rate limiting',
+            'Geautomatiseerde testing (Jest + Cypress)',
+            'CI/CD pipeline (GitHub Actions)',
+            'Performance monitoring (Sentry)'
+          ]
+        },
+        scaleReady: {
+          name: 'Schaal-Klare Platform',
+          description: 'Enterprise-grade platform klaar voor miljoenen gebruikers',
+          features: [
+            'Microservices architectuur',
+            'Multi-tenant database design',
+            'Real-time features (WebSockets)',
+            'Betaling verwerking (Stripe/PayPal)',
+            'Geavanceerde caching (Redis + CDN)',
+            'Auto-scaling infrastructuur',
+            'Security audit & penetratie testing',
+            '30 dagen toegewijde support'
+          ]
+        }
+      }
     },
     // Testimonials
     testimonials: {
@@ -427,6 +590,28 @@ export const translations = {
     faq: {
       title: 'Veelgestelde Vragen',
       subtitle: 'Krijg antwoorden op veelgestelde vragen over ons ontwikkelingsproces',
+      questions: {
+        deployment: {
+          question: "Wat is jullie deployment pipeline architectuur?",
+          answer: "Volledige CI/CD met GitHub Actions: geautomatiseerde testing (Jest + Cypress), security scanning (Snyk), deployment naar staging/productie omgevingen. Zero-downtime deployments met health checks en rollback mogelijkheden. Infrastructure as Code met Terraform."
+        },
+        techStack: {
+          question: "Welke tech stack raden jullie aan voor schaalbaarheid?",
+          answer: "Next.js + TypeScript + PostgreSQL + Docker voor de meeste projecten. Voor enterprise: microservices met Node.js/Go, Redis caching, message queues (RabbitMQ), monitoring (Grafana + Prometheus). Alles gecontaineriseerd met Kubernetes orchestration."
+        },
+        database: {
+          question: "Hoe gaan jullie om met database migraties en rollbacks?",
+          answer: "Schema versioning met Drizzle ORM, geautomatiseerde migratie scripts, database backups voor elke deployment. Rollback strategieën omvatten blue-green deployments en database transaction logs. Productie data loopt nooit risico."
+        },
+        monitoring: {
+          question: "Wat is inbegrepen in jullie monitoring en observability?",
+          answer: "Application performance monitoring (APM), error tracking (Sentry), log aggregatie (ELK stack), uptime monitoring (99.9% SLA), real-time alerts via Slack/PagerDuty. Aangepaste dashboards voor business metrics."
+        },
+        quality: {
+          question: "Hoe zorgen jullie voor code kwaliteit en beveiliging?",
+          answer: "Geautomatiseerde code reviews, 90%+ test coverage, dependency vulnerability scanning, SAST/DAST security testing, SOC 2 compliance. Elke commit gaat door linting, formatting en security checks voor merge."
+        }
+      }
     },
     // Contact
     contact: {
@@ -467,17 +652,28 @@ export const translations = {
       terms: 'Servicevoorwaarden',
       rights: 'Alle rechten voorbehouden.',
     },
+    // Toast Messages
+    toast: {
+      success: {
+        title: 'Bericht succesvol verzonden!',
+        description: 'We nemen binnen 24 uur contact met je op.',
+      },
+      error: {
+        title: 'Fout bij verzenden bericht',
+        description: 'Probeer het later opnieuw.',
+      },
+    },
     // Floating CTA
     floating: {
       ready: 'Klaar om te Beginnen?',
-      mvp7days: 'Krijg je MVP in 7 dagen',
+      mvp7days: 'Krijg je MVP vanaf 7 dagen',
       shareIdea: 'Deel Je Idee',
       bookCall: 'Boek Gratis Gesprek',
       consultation: 'Gratis consultatie',
       response: '24u reactie',
       mobile: {
         ready: 'Klaar om je MVP te bouwen?',
-        pricing: 'Vanaf €2.500 • 7-dagen levering',
+        pricing: 'Vanaf €2.500 • Vanaf 7-dagen levering',
         getStarted: 'Aan de Slag',
       },
     },

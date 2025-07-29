@@ -33,7 +33,7 @@ export default function VideoModal({ trigger, videoId = "dQw4w9WgXcQ" }: VideoMo
       <DialogContent className="max-w-4xl p-0 bg-black border-none">
         <VisuallyHidden>
           <DialogTitle>MVP Development Demo Video</DialogTitle>
-          <DialogDescription>Watch how we build MVPs for entrepreneurs in just 7 days</DialogDescription>
+          <DialogDescription>Watch how we build MVPs for entrepreneurs from just 7 days</DialogDescription>
         </VisuallyHidden>
         <div className="relative aspect-video">
           <button

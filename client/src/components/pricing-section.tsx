@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Star, Terminal, Code, Database, GitBranch } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export default function PricingSection() {
+  const { t } = useLanguage();
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -13,69 +15,42 @@ export default function PricingSection() {
 
   const pricingPlans = [
     {
-      name: "MVP Prototype",
-      price: "€1,500",
-      duration: "3-5 days",
+      name: t.pricing.plans.mvpPrototype.name,
+      price: `${t.common.from} €1,500`,
+      duration: `3-5 ${t.common.days}`,
       icon: <Terminal className="text-white" size={24} />,
       bgColor: "from-conversion-orange to-conversion-orange/80",
       borderColor: "border-conversion-orange",
-      description: "Rapid prototype with core functionality validation",
+      description: t.pricing.plans.mvpPrototype.description,
       techStack: ["React", "Node.js", "SQLite", "Tailwind"],
       codeSnippet: "npx create-mvp --template=prototype",
-      features: [
-        "Interactive prototype with core user flows",
-        "Authentication system (OAuth2)",
-        "Basic CRUD operations",
-        "Responsive design (mobile-first)",
-        "SEO optimization & meta tags",
-        "Analytics integration (GA4)",
-        "3 deployment environments",
-        "Source code documentation"
-      ],
+      features: t.pricing.plans.mvpPrototype.features,
       popular: false
     },
     {
-      name: "Production MVP",
-      price: "€2,500",
-      duration: "1-2 weeks",
+      name: t.pricing.plans.productionMvp.name,
+      price: `${t.common.from} €2,500`,
+      duration: `1-2 weeks`,
       icon: <Code className="text-white" size={24} />,
       bgColor: "from-vibe-green to-vibe-green/80",
       borderColor: "border-vibe-green",
-      description: "Production-ready MVP with enterprise architecture",
+      description: t.pricing.plans.productionMvp.description,
       techStack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
       codeSnippet: "docker-compose up --scale web=3",
-      features: [
-        "Full-stack TypeScript application",
-        "PostgreSQL with optimized queries",
-        "User authentication & authorization",
-        "Admin dashboard with analytics",
-        "REST/GraphQL API with rate limiting",
-        "Automated testing (Jest + Cypress)",
-        "CI/CD pipeline (GitHub Actions)",
-        "Performance monitoring (Sentry)"
-      ],
+      features: t.pricing.plans.productionMvp.features,
       popular: true
     },
     {
-      name: "Scale-Ready Platform",
-      price: "€5,000",
-      duration: "7-10 days",
+      name: t.pricing.plans.scaleReady.name,
+      price: `${t.common.from} €5,000`,
+      duration: `7-10 ${t.common.days}`,
       icon: <Database className="text-white" size={24} />,
       bgColor: "from-trust-blue to-trust-blue/80",
       borderColor: "border-trust-blue",
-      description: "Enterprise-grade platform ready for millions of users",
+      description: t.pricing.plans.scaleReady.description,
       techStack: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Kubernetes"],
       codeSnippet: "kubectl apply -f k8s/ && helm upgrade app",
-      features: [
-        "Microservices architecture",
-        "Multi-tenant database design",
-        "Real-time features (WebSockets)",
-        "Payment processing (Stripe/PayPal)",
-        "Advanced caching (Redis + CDN)",
-        "Auto-scaling infrastructure",
-        "Security audit & penetration testing",
-        "30 days dedicated support"
-      ],
+      features: t.pricing.plans.scaleReady.features,
       popular: false
     }
   ];
@@ -87,10 +62,10 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-vibe-green">{'$'}</span> Transparent Pricing
+            <span className="text-vibe-green">{'$'}</span> {t.pricing.title}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Enterprise-grade development packages with clear deliverables. No hidden costs, just production-ready code.
+            {t.pricing.subtitle}
           </p>
           <div className="mt-4 text-sm font-mono text-vibe-green">
             {'>'} npm install @vibe/mvp-builder --save
@@ -104,7 +79,7 @@ export default function PricingSection() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <Badge className="bg-green-600 text-white px-4 py-1 text-sm font-semibold font-mono">
                     <Star className="mr-1" size={14} />
-                    RECOMMENDED
+                    {t.pricing.popular}
                   </Badge>
                 </div>
               )}
@@ -155,7 +130,7 @@ export default function PricingSection() {
                   className={`w-full bg-gradient-to-r ${plan.bgColor} text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg group-hover:shadow-green-500/30`}
                 >
                   <GitBranch className="mr-2" size={16} />
-                  Deploy {plan.name}
+                  {t.pricing.getStarted} {plan.name}
                 </Button>
 
                 {/* Glow effect */}
@@ -171,7 +146,7 @@ export default function PricingSection() {
               <span className="text-green-400">{'>'}</span> Custom Architecture?
             </h3>
             <p className="text-gray-300 mb-6">
-              Need microservices, blockchain integration, or custom infrastructure? Let's architect your specific solution.
+              {t.pricing.custom}
             </p>
             <Button 
               onClick={scrollToContact}
@@ -180,7 +155,7 @@ export default function PricingSection() {
               className="border-2 border-green-500 text-green-400 hover:bg-green-600 hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 font-mono"
             >
               <Terminal className="mr-2" size={16} />
-              ./configure --custom
+              {t.pricing.customQuote}
             </Button>
           </div>
         </div>

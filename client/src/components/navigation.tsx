@@ -33,33 +33,38 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-6">
             <button 
               onClick={() => scrollToSection('why-us')}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-gray-300 hover:text-vibe-green transition-all duration-300 font-medium relative group"
             >
               {t.nav.whyUs}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-vibe-green transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-gray-300 hover:text-vibe-green transition-all duration-300 font-medium relative group"
             >
               {t.nav.services}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-conversion-orange transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button 
               onClick={() => scrollToSection('process')}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-gray-300 hover:text-vibe-green transition-all duration-300 font-medium relative group"
             >
               {t.nav.process}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-trust-blue transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-gray-300 hover:text-vibe-green transition-all duration-300 font-medium relative group"
             >
               {t.nav.pricing}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage-green transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button 
               onClick={() => scrollToSection('faq')}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-gray-300 hover:text-vibe-green transition-all duration-300 font-medium relative group"
             >
               {t.nav.faq}
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 group-hover:w-full"></div>
             </button>
             <LanguageSwitcher />
             <Button 
@@ -83,33 +88,38 @@ export default function Navigation() {
                 </div>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
+                  className="text-left text-secondary hover:text-vibe-green transition-all duration-300 font-medium relative group"
                 >
                   {t.nav.services}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-conversion-orange transition-all duration-300 group-hover:w-full"></div>
                 </button>
                 <button 
                   onClick={() => scrollToSection('why-us')}
-                  className="text-left text-gray-300 hover:text-green-400 transition-colors font-medium"
+                  className="text-left text-gray-300 hover:text-vibe-green transition-all duration-300 font-medium relative group"
                 >
                   {t.nav.whyUs}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-vibe-green transition-all duration-300 group-hover:w-full"></div>
                 </button>
                 <button 
                   onClick={() => scrollToSection('process')}
-                  className="text-left text-gray-300 hover:text-green-400 transition-colors font-medium"
+                  className="text-left text-gray-300 hover:text-vibe-green transition-all duration-300 font-medium relative group"
                 >
                   {t.nav.process}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-trust-blue transition-all duration-300 group-hover:w-full"></div>
                 </button>
                 <button 
                   onClick={() => scrollToSection('pricing')}
-                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
+                  className="text-left text-secondary hover:text-vibe-green transition-all duration-300 font-medium relative group"
                 >
                   {t.nav.pricing}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sage-green transition-all duration-300 group-hover:w-full"></div>
                 </button>
                 <button 
                   onClick={() => scrollToSection('faq')}
-                  className="text-left text-secondary hover:text-vibe-green transition-colors font-medium"
+                  className="text-left text-secondary hover:text-vibe-green transition-all duration-300 font-medium relative group"
                 >
                   {t.nav.faq}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-400 transition-all duration-300 group-hover:w-full"></div>
                 </button>
                 <Button 
                   onClick={() => scrollToSection('contact')}

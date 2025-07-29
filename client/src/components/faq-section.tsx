@@ -4,33 +4,36 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useLanguage } from "@/lib/i18n";
 
 export default function FAQSection() {
+  const { t } = useLanguage();
+  
   const faqs = [
     {
-      question: "What's your deployment pipeline architecture?",
+      question: t.faq.questions.deployment.question,
       command: "docker build && kubectl apply",
-      answer: "Full CI/CD with GitHub Actions: automated testing (Jest + Cypress), security scanning (Snyk), deployment to staging/production environments. Zero-downtime deployments with health checks and rollback capabilities. Infrastructure as Code with Terraform."
+      answer: t.faq.questions.deployment.answer
     },
     {
-      question: "Which tech stack do you recommend for scalability?",
+      question: t.faq.questions.techStack.question,
       command: "npm create next-app --typescript",
-      answer: "Next.js + TypeScript + PostgreSQL + Docker for most projects. For enterprise: microservices with Node.js/Go, Redis caching, message queues (RabbitMQ), monitoring (Grafana + Prometheus). All containerized with Kubernetes orchestration."
+      answer: t.faq.questions.techStack.answer
     },
     {
-      question: "How do you handle database migrations and rollbacks?",
+      question: t.faq.questions.database.question,
       command: "npx drizzle-kit migrate",
-      answer: "Schema versioning with Drizzle ORM, automated migration scripts, database backups before every deployment. Rollback strategies include blue-green deployments and database transaction logs. Production data is never at risk."
+      answer: t.faq.questions.database.answer
     },
     {
-      question: "What's included in your monitoring and observability?",
+      question: t.faq.questions.monitoring.question,
       command: "kubectl logs -f deployment/app",
-      answer: "Application performance monitoring (APM), error tracking (Sentry), log aggregation (ELK stack), uptime monitoring (99.9% SLA), real-time alerts via Slack/PagerDuty. Custom dashboards for business metrics."
+      answer: t.faq.questions.monitoring.answer
     },
     {
-      question: "How do you ensure code quality and security?",
+      question: t.faq.questions.quality.question,
       command: "npm run test:coverage && npm audit",
-      answer: "Automated code reviews, 90%+ test coverage, dependency vulnerability scanning, SAST/DAST security testing, SOC 2 compliance. Every commit goes through linting, formatting, and security checks before merge."
+      answer: t.faq.questions.quality.answer
     }
   ];
 
@@ -41,9 +44,9 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold font-poppins text-white mb-6">
-            <span className="text-green-400">{'>'}</span> Technical Documentation
+            <span className="text-green-400">{'>'}</span> {t.faq.title}
           </h2>
-          <p className="text-xl text-gray-300">Enterprise architecture and deployment questions answered</p>
+          <p className="text-xl text-gray-300">{t.faq.subtitle}</p>
           <div className="mt-4 text-sm font-mono text-green-400">
             {'>'} man vibe-coding --help
           </div>
